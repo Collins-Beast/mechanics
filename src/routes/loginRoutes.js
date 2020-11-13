@@ -1,5 +1,7 @@
 var mysql = require('mysql');
 var bcrypt = require('bcrypt');
+var jwt = require('jsonwebtoken');
+
 var connection  = mysql.createConnection({
 	host: '127.0.0.1',
 	port: '3308',
@@ -43,18 +45,17 @@ const login = async function(req,res){
 		if(err){
 			return res.status(400).json({
 				'code': 400,
-				'failed': 'error occurred'
+				'failed': 'An error occurred'
 			});
 		}
 		if(results.length > 0) {
 			const comparison = await bcrypt.compare(password, results[0].password);
+			
 			if(comparison){
-				return res.status(200).json({
-					'code' : 200,
-					'success' : 'Login successfull'
-				});
+				const token = jwt.sign(req.body, 'SherlokH@lmes05Bakerst', {expiresIn: 3600});
+				return res.status(200).json({'token': token});
 			}
-			res.status(204).json({
+			return res.status(204).json({
 				'code': 204,
 				'success' : 'Email and password do not match'
 			});
@@ -66,4 +67,18 @@ const login = async function(req,res){
 		}
 	});
 };
-module.exports = {registration, login};
+const isLoggedIn = function(req, res, next) {
+	let token = req.body.authorization;
+	if(!token){
+		return res.status(403).json({'error': 'Please login first'});
+	}
+	jwt.verify(token, 'SherlokH@lmes05Bakerst', function(err, decode) {
+		if(err){
+			console.log(err.message);
+			return res.status(403).json({'error': 'Please login first'});
+		}
+		console.log(decode);
+		return next();
+	});
+};
+module.exports = {registration, login, isLoggedIn};

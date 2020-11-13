@@ -15,6 +15,9 @@ router.get('/', function(req,res){
 });
 router.post('/api/register', handlers.registration);
 router.post('/api/login', handlers.login);
+router.post('/home', handlers.isLoggedIn, function(req, res) {
+	return res.send('Hello Player!');
+});
 
 app.use(router);
 

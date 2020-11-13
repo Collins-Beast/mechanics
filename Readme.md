@@ -1,0 +1,1 @@
+This is a template for quickly starting a web app with nodejs and MySQL. The templates implements user Registration and Login.
