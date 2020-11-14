@@ -12,7 +12,7 @@ app.use(express.static('./client'));
 const router = express.Router();
 
 router.get('/', function(req,res){
-	res.send({'message': 'Running'});
+	res.send('./client/index.html');
 });
 router.post('/api/register', handlers.registration);
 router.post('/api/login', handlers.login);

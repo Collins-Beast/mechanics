@@ -21,10 +21,23 @@ const registration = async function(req,res){
 	const password = req.body.password;
 	const salt = bcrypt.genSaltSync(10, 'a');
 	const encryptedPassword = await bcrypt.hash(password, salt);
+	if (!req.body.email) {
+		req.body.email = '';
+	}
 	let users = {
+		'phone' : req.body.phone,
 		'email' : req.body.email,
 		'password': encryptedPassword
 	};
+	let {phone} = users;
+	connection.query('SELECT * FROM users WHERE phone = ?', [phone], async function (err, results, fields) {
+		if (results.length > 0) {
+			return res.status(206).json({
+				'code': '206',
+				'success': 'That phone number is already registered.'
+			});
+		}
+	});
 	connection.query('INSERT INTO users SET ?', users, function (error, results, fields){
 		if(error){
 			return res.send({
@@ -39,9 +52,9 @@ const registration = async function(req,res){
 	});
 };
 const login = async function(req,res){
-	var email = req.body.email;
+	var phone = req.body.phone;
 	var password = req.body.password;
-	connection.query('SELECT * FROM users WHERE email = ?', [email],async function (err,results, fields) {
+	connection.query('SELECT * FROM users WHERE email = ?', [phone],async function (err,results, fields) {
 		if(err){
 			return res.status(400).json({
 				'code': 400,
@@ -57,18 +70,18 @@ const login = async function(req,res){
 			}
 			return res.status(204).json({
 				'code': 204,
-				'success' : 'Email and password do not match'
+				'success' : 'Phone and password do not match'
 			});
 		}else{
 			return res.status(206).json({
 				'code': 206,
-				'success': 'Email does not exist'
+				'success': 'Phone does not exist'
 			});
 		}
 	});
 };
 const isLoggedIn = function(req, res, next) {
-	let token = req.body.authorization;
+	let token = req.body.token;
 	if(!token){
 		return res.status(403).json({'error': 'Please login first'});
 	}

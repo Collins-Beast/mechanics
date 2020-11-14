@@ -23,11 +23,14 @@ $(document).ready(function(){
             data: user,
             success: function(res) {
                 console.log(res);
-                if (res.code == 200) {
-                    return window.location.href = 'localhost:8080/';
+                if(res.code === 206) {
+                    return $('#info').html('That phone does is already registered');
+                }
+                if(res.code === 200) {
+                    return $('#info').html('Registration successful')
                 }
                 return $('#info').html('Something went wrong, please try again');
             }
-        }).fail(err => $('#info').html('Something went wrong, please try again'));
+        }).fail(err => $('#info').html('Something went wrong, please try again. Are you connected?'));
 	});
 });
