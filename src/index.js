@@ -7,6 +7,7 @@ const handlers = require('./routes/loginRoutes');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static('./client'));
 
 const router = express.Router();
 

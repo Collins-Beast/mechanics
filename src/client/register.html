@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>E-Gas - Register</title>
+        <link rel = 'stylesheet' href = 'css/bootstrap.css'/>
+        <script src='js/bootstrap.js'></script>
+        <script src='js/jquery.js'></script>
+        <script src='js/custom.js'></script>
+    </head>
+    <body>
+        <div class='container'>
+            <form class="form" id = 'form-register'>
+                <fieldset>
+                    <div id='legend'>
+                        <legend>Register</legend>
+                    </div>
+                    <p class="text-danger" id = 'info'></p>
+                    <div class='form-group'>
+                        <label class='col-sm-2 col-form-label' for='phone'>Mobile Phone</label>
+                        <div class='col-sm-10'>
+                            <input type="text" id='phone' name="phone" placeholder='Phone No.' class='form-control input-xlarge' required/>
+                            <small class='help-block form-text text-muted' id='phone-info'>Enter your mobile phone number. It can only be numbers</small>
+                        </div>
+                    </div>
+
+                    <div class='form-group'>
+                        <label class='col-sm-2 col-form-label' for='email'>
+                            E-mail
+                        </label>
+                        <div class='col-sm-10'>
+                            <input type='email' id='email' name='email' placeholder="Enter email address" class='input-xlarge form-control' aria-describedby="email-info"/>
+                            <small class="help-block form-text text-muted" id="email-info"></small>
+                        </div>
+                    </div>
+
+                    <div class='form-group'>
+                        <label for='password' class='col-sm-2 col-form-label'> Password</label>
+                        <div class="col-sm-10">
+                            <input required type="password" id="password" name="password" placeholder="" class="form-control input-xlarge"/>
+                            <small class='help-block form-text text-muted' id = 'password-info'> Password should be atleast 6 characters</small>
+                        </div>
+                    </div>
+
+                    <div class='form-group'>
+                        <label class='col-sm-2 col-form-label'> Confirm password</label>
+                        <div class='col-sm-10'>
+                            <input required type='password' name='confirm-password' id='confirm-password' class='form-control input-xlarge'/>
+                            <small class="help-block form-text text-muted" id='confirm-password-info'>Please confirm password</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit" id="register">Register</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
