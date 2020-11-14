@@ -1,3 +1,18 @@
+body{
+    font-family: cursive;
+}
 #login-card{
     margin-top: 15%;
+}
+nav{
+    width: 100%;
+    background-color: white;
+    height: 75px;
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.51);
+-moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.51);
+box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.51);
+font-family: cursive;
+}
+.margin-5{
+    margin: 5px;
 }

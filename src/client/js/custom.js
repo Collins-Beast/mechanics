@@ -1,7 +1,11 @@
 $(document).ready(function(){
+	$('#form-register').on('change', function(e){
+		$('#info').html('');
+	});
 	$('#form-register').on('submit', function(event){
 		event.preventDefault();
-		if($('#password').val() !== $('#cofirm-password').val()) {
+		if($('#password').val() !== $('#confirm-password').val()) {
+			console.log($('#password').val() !== $('#cofirm-password').val());
 			return $('#info').html('Password and confirm password do not match');
 		}
 		if(Number.isInteger($('#phone').val())){
@@ -13,24 +17,21 @@ $(document).ready(function(){
 		let user = {
 			email: $('#email').val(),
 			phone: $('#phone').val(),
-            password: $('#password').val();
-        };
-        let url = 'localhost:8080/api/register';
-        $.post({
-            url: url,
-            contentType: 'application/json',
-            dataType: 'json',
-            data: user,
-            success: function(res) {
-                console.log(res);
-                if(res.code === 206) {
-                    return $('#info').html('That phone does is already registered');
-                }
-                if(res.code === 200) {
-                    return $('#info').html('Registration successful')
-                }
-                return $('#info').html('Something went wrong, please try again');
-            }
-        }).fail(err => $('#info').html('Something went wrong, please try again. Are you connected?'));
+			password: $('#password').val()
+		};
+		let url = 'http://localhost:8080/api/register';
+		$.post(url, user, function(data, status) {
+			console.log(data.code + ' : ' + status);
+			if(data.code === 206) {
+				return $('#info').html('That phone does is already registered');
+			}
+			if(data.code === 200) {
+				return $('#info').html('Registration successful');
+			}
+			return $('#info').html('Something went wrong, please try again');
+		}).catch(err => {
+			console.log(err);
+			return $('#info').html('Something went wrong, please try again. Are you connected?');
+		});
 	});
 });

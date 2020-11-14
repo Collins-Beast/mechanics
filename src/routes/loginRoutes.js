@@ -37,7 +37,7 @@ const registration = async function(req,res){
 				'success': 'That phone number is already registered.'
 			});
 		}
-	});
+	}); 
 	connection.query('INSERT INTO users SET ?', users, function (error, results, fields){
 		if(error){
 			return res.send({
@@ -54,7 +54,7 @@ const registration = async function(req,res){
 const login = async function(req,res){
 	var phone = req.body.phone;
 	var password = req.body.password;
-	connection.query('SELECT * FROM users WHERE email = ?', [phone],async function (err,results, fields) {
+	connection.query('SELECT * FROM users WHERE phone = ?', [phone], async function (err,results, fields) {
 		if(err){
 			return res.status(400).json({
 				'code': 400,
@@ -62,11 +62,11 @@ const login = async function(req,res){
 			});
 		}
 		if(results.length > 0) {
-			const comparison = await bcrypt.compare(password, results[0].password);
+			let comparison = await bcrypt.compare(password, results[0].password);
 			
 			if(comparison){
-				const token = jwt.sign(req.body, 'SherlokH@lmes05Bakerst', {expiresIn: 3600});
-				return res.status(200).json({'token': token});
+				const token = jwt.sign(req.body, 'SherlokH@lmes05Bakerst', {expiresIn: 360000});
+				res.status(200).json({'token': token, code: 200});
 			}
 			return res.status(204).json({
 				'code': 204,
@@ -82,6 +82,9 @@ const login = async function(req,res){
 };
 const isLoggedIn = function(req, res, next) {
 	let token = req.body.token;
+	if(!token){
+		token = req.query.token;
+	}
 	if(!token){
 		return res.status(403).json({'error': 'Please login first'});
 	}
