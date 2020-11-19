@@ -31,7 +31,7 @@ router.get('/home', handlers.isLoggedIn, function(req, res) {
 
 app.use(router);
 
-app.listen(8080, function(err){
+app.listen(8080, function(err){ 
 	if(err) throw err;
 	console.log('Listening on: ' + 8080);
 });
