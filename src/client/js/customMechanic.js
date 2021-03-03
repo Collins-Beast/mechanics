@@ -14,6 +14,7 @@ $(document).ready(function () {
     if (Number.isInteger($("#phone").val())) {
       return $("#info").html("Please enter valid phone number");
     }
+
     if (
       !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
         $("#email").val()
@@ -26,8 +27,9 @@ $(document).ready(function () {
       email: $("#email").val(),
       phone: $("#phone").val(),
       password: $("#password").val(),
+      licence: $("#licence").val(),
+      location: $("#location").val(),
     };
-
     let url = "http://localhost:8080/api/register";
     $.post(url, user, function (data, status) {
       console.log(data.code + " : " + status);

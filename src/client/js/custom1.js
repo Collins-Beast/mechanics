@@ -26,6 +26,8 @@ $(document).ready(function () {
       email: $("#email").val(),
       phone: $("#phone").val(),
       password: $("#password").val(),
+      location: $("#location").val(),
+      licence: $("#licence").val(),
     };
 
     let url = "http://localhost:8080/api/register";

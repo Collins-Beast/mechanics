@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    alert('loaded')
   $("#form-register").on("change", function (e) {
     $("#info").html("");
   });
@@ -26,8 +27,10 @@ $(document).ready(function () {
       email: $("#email").val(),
       phone: $("#phone").val(),
       password: $("#password").val(),
+      location: $("#location").val(),
+      licence: $("#licence").val(),
     };
-
+    console.log(user);
     let url = "http://localhost:8080/api/register";
     $.post(url, user, function (data, status) {
       console.log(data.code + " : " + status);

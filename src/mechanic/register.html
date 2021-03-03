@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>E-Gas - Register</title>
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <title>Mechanic Finder | Register</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+      integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/bootstrap.js"></script>
     <script src="js/custom.js"></script>
   </head>
+
   <body>
     <div class="container">
       <form class="form" id="form-register">
@@ -19,11 +29,12 @@
             <label class="col-sm-2 col-form-label" for="phone">Full Name</label>
             <div class="col-sm-10">
               <input
+                autocomplete="off"
                 type="text"
                 id="name"
                 name="phone"
                 placeholder="Full Name"
-                class="form-control input-xlarge"
+                class="form-control input autocomplete='off'-xlarge"
                 required
               />
               <small class="help-block form-text text-muted" id="phone-info"
@@ -37,11 +48,12 @@
             >
             <div class="col-sm-10">
               <input
+                autocomplete="off"
                 type="text"
                 id="phone"
                 name="phone"
                 placeholder="Phone No."
-                class="form-control input-xlarge"
+                class="form-control input autocomplete='off'-xlarge"
                 required
               />
               <small class="help-block form-text text-muted" id="phone-info"
@@ -54,17 +66,57 @@
             <label class="col-sm-2 col-form-label" for="email"> E-mail </label>
             <div class="col-sm-10">
               <input
+                autocomplete="off"
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Enter email address"
-                class="input-xlarge form-control"
+                class="input autocomplete='off'-xlarge form-control"
                 aria-describedby="email-info"
               />
               <small
                 class="help-block form-text text-muted"
                 id="email-info"
               ></small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-form-label" for="phone"
+              >Licence Number</label
+            >
+            <div class="col-sm-10">
+              <input
+                autocomplete="off"
+                type="text"
+                id="licence"
+                name="phone"
+                placeholder="Licence No."
+                class="form-control input autocomplete='off'-xlarge"
+                required
+              />
+              <small class="help-block form-text text-muted" id="phone-info"
+                >Enter your Licence Number</small
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-10 col-form-label" for="phone"
+              >Physical Location of Work(use name of atleast a nearest
+              Centre)</label
+            >
+            <div class="col-sm-10">
+              <input
+                autocomplete="off"
+                type="text"
+                id="location"
+                name="phone"
+                placeholder="Location."
+                class="form-control input autocomplete='off'-xlarge"
+                required
+              />
+              <small class="help-block form-text text-muted" id="phone-info"
+                >Enter your Location</small
+              >
             </div>
           </div>
 
@@ -74,12 +126,13 @@
             >
             <div class="col-sm-10">
               <input
+                autocomplete="off"
                 required
                 type="password"
                 id="password"
                 name="password"
                 placeholder=""
-                class="form-control input-xlarge"
+                class="form-control input autocomplete='off'-xlarge"
               />
               <small class="help-block form-text text-muted" id="password-info">
                 Password should be atleast 6 characters</small
@@ -91,11 +144,12 @@
             <label class="col-sm-2 col-form-label"> Confirm password</label>
             <div class="col-sm-10">
               <input
+                autocomplete="off"
                 required
                 type="password"
                 name="confirm-password"
                 id="confirm-password"
-                class="form-control input-xlarge"
+                class="form-control input autocomplete='off'-xlarge"
               />
               <small
                 class="help-block form-text text-muted"
