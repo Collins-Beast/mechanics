@@ -22,6 +22,9 @@ app.use(
 const router = express.Router();
 
 router.get("/", function (req, res) {
+  res.send("home");
+});
+router.get("/client/login", function (req, res) {
   res.sendFile(path.join(__dirname, "client", "index.html"));
 });
 router.get("/register", function (req, res) {
@@ -49,7 +52,7 @@ router.get("/home", handlers.isLoggedIn, function (req, res) {
   return res.sendFile(path.join(__dirname, "client", "home.html"));
 });
 
-console.log(path.join(__dirname, 'mechanic/'))
+console.log(path.join(__dirname, "mechanic/"));
 
 app.use(express.static(path.join(__dirname, "client")));
 app.use(express.static(path.join(__dirname, "mechanic")));

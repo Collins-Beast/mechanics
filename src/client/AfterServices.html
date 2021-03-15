@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Selcting your location</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      href="css/bootstrap-4.3.1-dist/css/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <title>Online mechanic finder</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputs">
+        <div class="row">
+          <div class="col-12">
+            <h1><marquee>Find Our Mechanics</marquee></h1>
+            <form class="form1">
+              <div class="row">
+                <div class="col-3 logo11"></div>
+                <div class="col-6">
+                  <p id="ser"></p>
+                  <label><strong>Location:</strong></label>
+                  <select required id="locationSelection">
+                    <option>--Select The Type Of Service--</option>
+                    <option id="Langas" value="Langas">Langas</option>
+                    <option id="Kesses" value="Kesses">Kesses</option>
+                    <option id="Eldoret" value="Eldoret">Eldoret</option>
+                    <option id="Kpa" value="Kpa">Kpa</option>
+                    <option id="Pioneer" value="Pioneer">Pioneer</option>
+                    <option id="Annex" value="Annex">Annex</option>
+                    <option id="Mu" value="Mu">Mu</option></select
+                  ><br /><br />
+
+                  <label><strong> Car Model:</strong></label>
+                  <select required id="cars">
+                    <option>--Select Your Car Model--</option>
+                    <option>Ford</option>
+                    <option id="toyota" value="Toyota">Toyota</option>
+                    <option id="nissan" value="Nissan">Nissan</option>
+                    <option id="volvo" value="Volvo">Volvo</option>
+                    <option id="range" value="Range Rover">Range Rover</option>
+                    <option id="bmw" value="BMW">BMW</option></select
+                  ><br />
+                  <br />
+                   <form>
+                    <div class="form-group">
+                      <label for="comment">Write a Brief description of the problem(leave blank if not sure):</label>
+                      <textarea class="form-control" rows="5" id="comment"></textarea>
+
+                    </div>
+                    <br>
+                    <button type="button" id="demo" class="btn m-3 btn-primary btn-lg" onclick="getLocation()">Click here for us to know your location</button>
+                    <div class="m-3" id='location-demo'></div>
+                    <button type="button" class="btn btn-primary btn-lg">Click to check available Mechanics.</button>
+
+                  </form>
+                  
+
+                  <br /><br />
+                </div>
+                <div class="col-3 logo22"></div>
+              </div>
+            </form>
+          </div>
+          
+          
+         
+      
+    
+    </div>
+    
+    <script>
+        var x = document.getElementById("location-demo");
+
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+
+        function showPosition(position) {
+          x.innerHTML = "Latitude: " + position.coords.latitude + 
+          "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+  </body>
+</html>
