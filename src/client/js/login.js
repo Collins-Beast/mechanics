@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$('#login').on('submit', function(event){
 		event.preventDefault();
 		let user = {
-			phone: $('#phone').val(),
+			phone: $('#phone').val() + ''.replace(/\s/g, ''),
 			password: $('#password').val()
 		};
 		let url = 'http://localhost:8080/api/login';
