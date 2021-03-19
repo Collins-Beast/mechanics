@@ -17,13 +17,15 @@ app.use(
     },
   })
 );
-// app.use(express.static("C:/Users/Troll/Desktop/collin-gas/src/client/"));
-
+app.use(express.static("C:/Users/Troll/Desktop/collin-gas/src/client/"));
+app.use(express.static(path.join(__dirname)))
+console.log(__dirname)
 const router = express.Router();
 
 router.get("/", function (req, res) {
   res.send("home");
 });
+console.log('List')
 router.get("/client/login", function (req, res) {
   res.sendFile(path.join(__dirname, "client", "index.html"));
 });

@@ -1,18 +1,21 @@
 /*mechanic finder*/
-.names{
+.names {
 	text-align: left;
 	font-size: 15px;
 
 }
+
 .full {
-    width: 100%;    
+	width: 100%;
 }
+
 .gap {
 	height: 30px;
 	width: 100%;
 	clear: both;
 	display: block;
 }
+
 .footer {
 	background: #002147;
 	height: auto;
@@ -22,12 +25,15 @@
 	border-bottom: 1px solid #CCCCCC;
 	border-top: 1px solid #DDDDDD;
 }
+
 .footer p {
 	margin: 0;
 }
+
 .footer img {
 	max-width: 100%;
 }
+
 .footer h3 {
 	color: white;
 	font-size: 18px;
@@ -35,7 +41,7 @@
 	line-height: 27px;
 	padding: 40px 0 0px;
 	text-transform: uppercase;
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .footer h4 {
@@ -45,7 +51,7 @@
 	line-height: 38px;
 	padding: 40px 0 10px;
 	font-family: cursive;
-  font-weight: lighter
+	font-weight: lighter
 }
 
 .footer ul {
@@ -55,31 +61,43 @@
 	padding-left: 0;
 	margin-top: 0px;
 	color: #7F8C8D;
-  padding: 0 0 8px 0;
+	padding: 0 0 8px 0;
 }
 
-.email{
-  border-bottom: 3px solid #fff;
+.email {
+	border-bottom: 3px solid #fff;
 }
+
 .footer ul li a {
 	padding: 0 0 12px 0;
 	display: block;
 }
+
 .footer a {
 	color: white;
-  font-weight: lighter;
+	font-weight: lighter;
 }
 
 .footer p {
 	color: white;
-  font-weight: lighter;
-  font-size: 
+	font-weight: lighter;
+	font-size:
 }
 
-.footer a:hover {
-	text-decoration:none;
-  font-weight: bold;
+#allMechanics {
+	display: none;
 }
+
+.mechanic {
+	display: none;
+}
+
+
+.footer a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+
 .supportLi h4 {
 	font-size: 20px;
 	font-weight: lighter;
@@ -94,96 +112,148 @@
 }
 
 }
+
 .footer a {
 	color: #78828D
 }
 
 .footer-bottom {
-  margin-top: 2em;
+	margin-top: 2em;
 	border-top: 1px solid #DDDDDD;
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
+
 .footer-bottom p.pull-left {
 	padding-top: 6px;
-  font-size: 0.75em
+	font-size: 0.75em
 }
 
-  .about-company{
-    i{font-size: 25px;}
-    a{
-      color:white;
-      transition: color .2s;
-      &:hover{color:#4180CB}
-    }
-  } 
-  .location{
-    i{font-size: 18px;}
-  }
-  .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+.about-company {
+	i {
+		font-size: 25px;
+	}
+
+	a {
+		color: white;
+		transition: color .2s;
+
+		&:hover {
+			color: #4180CB
+		}
+	}
 }
-.ratings{
+
+.location {
+	i {
+		font-size: 18px;
+	}
+}
+
+.copyright p {
+	border-top: 1px solid rgba(255, 255, 255, .1);
+}
+}
+
+.ratings {
 	text-align: center;
 }
-.myMechanics{ /*myMecchanics selector (class selectors)*/
+
+.myMechanics {
+	/*myMecchanics selector (class selectors)*/
 	margin-top: 10px;
 
 }
+
 .checked {
-  color: orange;
+	color: orange;
 }
-#Collins, #Ambrose, #Nelly, #Lawrence, #Willy, #Brian, #Joseph, #faith, #Godwill, #Sharon, #mwangi, #Wagod, #Henry, #mercy
-{
+
+#Collins,
+#Ambrose,
+#Nelly,
+#Lawrence,
+#Willy,
+#Brian,
+#Joseph,
+#faith,
+#Godwill,
+#Sharon,
+#mwangi,
+#Wagod,
+#Henry,
+#mercy {
+	border-style: inset;
+	padding: 30px;
+}
+
+.cont1,
+.cont2,
+.cont3,
+.cont4,
+.cont5,
+.cont6,
+.cont7,
+.cont8,
+.cont9,
+.cont10,
+.cont11,
+.cont12,
+.cont13,
+.cont14
+
+/*grouping selectors*/
+	{
 	display: none;
 	border-style: inset;
 	padding: 30px;
 }
-.cont1, .cont2, .cont3, .cont4, .cont5, .cont6, .cont7, .cont8, .cont9, .cont10, .cont11, .cont12, .cont13, .cont14 /*grouping selectors*/
-{
-	display: none;
-	border-style: inset;
-	padding: 30px;
-}
-#contact/*id selectors*/
-{
+
+#contact
+
+/*id selectors*/
+	{
 	text-align: center;
 	background-color: orange;
 	margin-bottom: 30px;
 	padding: 30px;
-	text-shadow:4px 4px 8px blue;
+	text-shadow: 4px 4px 8px blue;
 }
-#comments
-{
+
+#comments {
 	width: 55%;
 	height: 30vh;
 }
-#name
-{
-+	width: 30%;
+
+#name {
+	+width: 30%;
 }
-#conta, #ser
-{
+
+#conta,
+#ser {
 	color: red;
 }
-#con, #model, #loc
-{
+
+#con,
+#model,
+#loc {
 	color: green;
 }
-marquee
-{
+
+marquee {
 	color: red;
 }
-.flip-card-back button
-{
+
+.flip-card-back button {
 	margin-top: 50px;
 	text-align: center;
 }
-.body
-{
+
+.body {
 	background-color: #a66b59;
 }
-.form1
-{
+
+.form1 {
 	margin-top: 10px;
 	text-align: center;
 	border-style: solid;
@@ -191,109 +261,112 @@ marquee
 	padding: 20px;
 	font-size: 20px;
 }
-.inputs
-{
+
+.inputs {
 	font-size: 20px;
 	font-style: italic;
 	font-weight: bold;
 }
-.logo11{
+
+.logo11 {
 	background-image: url("../images/logo4.jpeg");
-	background-repeat: no-repeat;/*(to control the repetion of an image*/)
-	background-position: center;/*to control the position of  image */
+	background-repeat: no-repeat;
+	/*(to control the repetion of an image*/
+	) background-position: center;
+	/*to control the position of  image */
 }
-.logo22{
+
+.logo22 {
 	background-image: url("../images/logo4.jpeg");
 	background-repeat: no-repeat;
 	background-position: center;
 }
-h1
-{
+
+h1 {
 	font-size: 40px;
 	margin-top: 80px;
 }
+
 .flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+	background-color: transparent;
+	width: 300px;
+	height: 200px;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px;
+	/* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+	background-color: #bbb;
+	color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #bf7c40;
-  color: white;
-  transform: rotateY(180deg);
+	background-color: #bf7c40;
+	color: white;
+	transform: rotateY(180deg);
 }
 
-*,body{
+*,
+body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 
 }
-#p{
-}
 
-html{
+#p {}
+
+html {
 	font-size: 10px;
 	font-family: "Roboto Cn", sans-serif;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: #eee;
 }
-#Victor{
-	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://i.huffpost.com/gen/3762938/thumbs/o-SEN-1-900.jpg?7") center no-repeat;
+
+#Victor {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)), url("https://i.huffpost.com/gen/3762938/thumbs/o-SEN-1-900.jpg?7") center no-repeat;
 	background-size: cover;
 	background-repeat: no-repeat
 }
-header{
-	width: 100%;
-	height: 100vh;
 
-	position: relative;
-  overflow: hidden;
-}
 
-.container{
+.container {
 	max-width: 100%;
 	width: 90%;
 	margin: 0 auto;
 }
 
-.menu-toggle{
+.menu-toggle {
 	position: fixed;
 	top: 2.5rem;
 	right: 2.5rem;
@@ -304,7 +377,7 @@ header{
 	display: none;
 }
 
-nav{
+nav {
 	padding-top: 5rem;
 	display: flex;
 	justify-content: space-between;
@@ -313,14 +386,15 @@ nav{
 	font-size: 1.6rem;
 }
 
-.brand{
+.brand {
 	font-size: 3rem;
 	font-weight: 300;
 	transform: translateX(-100rem);
 	animation: slideIn .5s forwards;
 
 }
-#mbele{
+
+#mbele {
 	color: rgb(255, 155, 24);
 
 	font-family: 'Poiret One', cursive;
@@ -329,52 +403,50 @@ nav{
 
 }
 
-.brand span{
+.brand span {
 	color: rgb(255, 155, 24);
 }
 
-nav ul{
+nav ul {
 	display: flex;
 }
 
-nav ul li{
+nav ul li {
 	list-style: none;
 	transform: translateX(100rem);
 	animation: slideIn .5s forwards;
 }
 
-nav ul li:nth-child(1){
+nav ul li:nth-child(1) {
 	animation-delay: 0s;
 
 }
 
-nav ul li:nth-child(2){
+nav ul li:nth-child(2) {
 	animation-delay: .5s;
 }
 
-nav ul li:nth-child(3){
+nav ul li:nth-child(3) {
 	animation-delay: 1s;
 }
 
-nav ul li:nth-child(4){
+nav ul li:nth-child(4) {
 	animation-delay: 1.5s;
 }
 
-nav ul li a{
+nav ul li a {
 	padding: 1rem 0;
 	margin: 0 3rem;
 	position: relative;
 	letter-spacing: 2px;
 }
 
-nav ul li a:last-child{
+nav ul li a:last-child {
 	margin-right: 0;
 }
 
 nav ul li a::before,
-nav ul li a::after
-
-{
+nav ul li a::after {
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -386,26 +458,28 @@ nav ul li a::after
 
 }
 
-nav ul li a::before{
+nav ul li a::before {
 	top: 0;
 	transform-origin: left;
 }
 
-nav ul li a::after{
+nav ul li a::after {
 	bottom: 0;
 	transform-origin: right;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
 	text-decoration-color: none;
 
 
 }
-.orange{
-	color:rgb(255, 155, 24);
+
+.orange {
+	color: rgb(255, 155, 24);
 }
-.overlay{
-	background-color: rgba(0,0,0,.95);
+
+.overlay {
+	background-color: rgba(0, 0, 0, .95);
 	position: fixed;
 	right: 0;
 	left: 0;
@@ -414,31 +488,30 @@ nav ul li a:hover{
 	transition: opacity 650ms;
 	transform: scale(0);
 	opacity: 0;
-  display: none;
+	display: none;
 }
 
 nav ul li a:hover::before,
-nav ul li a:hover::after{
+nav ul li a:hover::after {
 	transform: scaleX(1);
 
 }
 
 @keyframes slideIn {
-	from{
+	from {}
 
-	}
-	to{
+	to {
 		transform: translateX(0);
 	}
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
 
-	.menu-toggle{
+	.menu-toggle {
 		display: block;
 	}
 
-	nav{
+	nav {
 		padding-top: 0;
 		display: none;
 		flex-direction: column;
@@ -448,417 +521,424 @@ nav ul li a:hover::after{
 		text-align: center;
 	}
 
-	nav ul{
+	nav ul {
 		flex-direction: column;
 	}
 
-	nav ul li{
+	nav ul li {
 		margin-top: 5rem;
 	}
 
-	nav ul li a{
+	nav ul li a {
 		margin: 0;
 		font-size: 2.5rem;
 	}
 
-	.brand{
+	.brand {
 		font-size: 5rem;
 	}
 
-  .overlay.menu-open,
-  nav.menu-open{
-	  display: flex;
-	  transform: scale(1);
-	  opacity: 1;
-  }
+	.overlay.menu-open,
+	nav.menu-open {
+		display: flex;
+		transform: scale(1);
+		opacity: 1;
+	}
 
 }
-section{
-	height:100vh;
+
+section {
+	height: 100vh;
 
 }
-#kubwa{
+
+#kubwa {
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	margin-top:240px;
+	margin-top: 240px;
 	transform: translateY(-50%);
-	width:100%;
-	text-align:center;
-	color:#ddd;
-	font-size:6em;
+	width: 100%;
+	text-align: center;
+	color: #ddd;
+	font-size: 6em;
 	font-family: sans-serif;
 	letter-spacing: 0.1em;
 
 }
-#kubwa span{
+
+#kubwa span {
 	/*   */
 	display: inline-block;
-	animation:animate 3s linear forwards;
-}
-@keyframes animate
-{
-0%{
-opacity: 0.1;
-transform: rotateY(90deg);
-filter:blur(10px);
-}
-0%{
-	opacity: 100%;
-	transform: rotateY(0deg);
-filter:blur(0px);
-}
+	animation: animate 3s linear forwards;
 }
 
-wiil
+@keyframes animate {
+	0% {
+		opacity: 0.1;
+		transform: rotateY(90deg);
+		filter: blur(10px);
+	}
 
------------------------------------------------
+	0% {
+		opacity: 100%;
+		transform: rotateY(0deg);
+		filter: blur(0px);
+	}
+}
+
+wiil -----------------------------------------------
+
 /*aboutUs*/
- .names {
+.names {
 	text-align: left;
 	font-size: 15px;
- }
- .ratings {
+}
+
+.ratings {
 	text-align: center;
- }
+}
 
 
-.about{
+.about {
 	text-align: center;
 	padding-top: 100px;
 	padding-bottom: 150px;
-	
+
 }
-.about-heading{
+
+.about-heading {
 	font-size: 50px;
 }
-.about-quote{
 
+.about-quote {}
+
+.about-content {
+	font-size: 20px;
 }
-.about-content{
-	font-size:20px;
-}
+
 hr {
-<<<<<<< HEAD
-	height:1px;
-	border:none;
-	color:#000;
-	background-color:#000;
-	width:30%;
+	<<<<<<< HEAD height: 1px;
+	border: none;
+	color: #000;
+	background-color: #000;
+	width: 30%;
 	/* margin: 35%; */
-=======
-	height:1px; 
-	border:none; 
-	color:#000; 
-	background-color:#000; 
-	width:30%; 
-/*landingPage*/
-.names{
-	text-align: left;
-	font-size: 15px;
+	=======height: 1px;
+	border: none;
+	color: #000;
+	background-color: #000;
+	width: 30%;
 
-}
-
-.ratings{
-	text-align: center;
-}
-.myMechanics{
-	margin-top: 10px;
-
-}
-.checked {
-  color: orange;
-}
-*,body{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth scroll;
-	transition:  all 3s ease-in-out;  
-	
-}
-
-html{
-	font-size: 10px;
-	font-family: "Roboto Cn", sans-serif;
-}
-
-a{
-	text-decoration: none;
-	color: #eee;
-}
-#Victor{
-	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://i.huffpost.com/gen/3762938/thumbs/o-SEN-1-900.jpg?7") center no-repeat;
-	background-size: cover;
-	background-repeat: no-repeat
-}
-header{
-	width: 100%;
-	height: 100vh;
-	
-	position: relative;
-  overflow: hidden;
-}
-
-.container{
-	max-width: 100%;
-	width: 90%;
-	margin: 0 auto;
-}
-
-.menu-toggle{
-	position: fixed;
-	top: 2.5rem;
-	right: 2.5rem;
-	/* color: #eeeeee; */
-	font-size: 3rem;
-	cursor: pointer;
-	z-index: 1000;
-	display: none;
->>>>>>> upstream/master
-}
- 
-nav{
-	padding-top: 5rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	text-transform: uppercase;
-	font-size: 1.6rem;
-}
-<<<<<<< HEAD
-=======
-
-.brand{
-	font-size: 3rem;
-	font-weight: 300;
-	transform: translateX(-100rem);
-	animation: slideIn .5s forwards;
-	
-}
-#mbele{
-	color: rgb(255, 155, 24);
-
-	font-family: 'Poiret One', cursive;
-	margin-top: 220px;
-	font-size: 40px;
-	
-}
-
-.brand span{
-	color: rgb(255, 155, 24);
-}
-
-nav ul{
-	display: flex;
-}
-
-nav ul li{
-	list-style: none;
-	transform: translateX(100rem);
-	animation: slideIn .5s forwards;
-}
-
-nav ul li:nth-child(1){
-	animation-delay: 0s;
-
-}
-
-nav ul li:nth-child(2){
-	animation-delay: .5s;
-}
-
-nav ul li:nth-child(3){
-	animation-delay: 1s;
-}
-
-nav ul li:nth-child(4){
-	animation-delay: 1.5s;
-}
-
-nav ul li a{
-	padding: 1rem 0;
-	margin: 0 3rem;
-	position: relative;
-	letter-spacing: 2px;
-}
-
-nav ul li a:last-child{
-	margin-right: 0;
-}
-
-nav ul li a::before,
-nav ul li a::after
-
-{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	background-color: rgb(255, 155, 24);
-	left: 0;
-	transform: scaleX(0);
-	transition: all .5s;
-
-}
-
-nav ul li a::before{
-	top: 0;
-	transform-origin: left;
-}
-
-nav ul li a::after{
-	bottom: 0;
-	transform-origin: right;
-}
-
-nav ul li a:hover{
-	text-decoration-color: none;
-	
-	
-}
-.orange{
-	color:rgb(255, 155, 24);
-}
-.overlay{
-	background-color: rgba(0,0,0,.95);
-	position: fixed;
-	right: 0;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	transition: opacity 650ms;
-	transform: scale(0);
-	opacity: 0;
-  display: none;
-}
-
-nav ul li a:hover::before,
-nav ul li a:hover::after{
-	transform: scaleX(1);
-	
-}
-
-@keyframes slideIn {
-	from{
+	/*landingPage*/
+	.names {
+		text-align: left;
+		font-size: 15px;
 
 	}
-	to{
-		transform: translateX(0);
-	}
-}
 
-@media screen and (max-width: 700px){
-
-	.menu-toggle{
-		display: block;
-	}
-
-	nav{
-		padding-top: 0;
-		display: none;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-		height: 100vh;
+	.ratings {
 		text-align: center;
 	}
 
-	nav ul{
-		flex-direction: column;
+	.myMechanics {
+		margin-top: 10px;
+
 	}
 
-	nav ul li{
-		margin-top: 5rem;
+	.checked {
+		color: orange;
 	}
 
-	nav ul li a{
+	*,
+	body {
 		margin: 0;
-		font-size: 2.5rem;
+		padding: 0;
+		box-sizing: border-box;
+		scroll-behavior: smooth scroll;
+		transition: all 3s ease-in-out;
+
 	}
 
-	.brand{
-		font-size: 5rem;
+	html {
+		font-size: 10px;
+		font-family: "Roboto Cn", sans-serif;
 	}
-  
-  .overlay.menu-open,
-  nav.menu-open{
-	  display: flex;
-	  transform: scale(1);
-	  opacity: 1;
-  }
-  
-}
-section{
-	height:100vh;
-	
-}
-#kubwa{
-	margin: 0;
-	padding: 0;
-	position: absolute; 
-	margin-top:240px; 
-	transform: translateY(-50%);
-	width:100%;
-	text-align:center;
-	color:#ddd; 
-	font-size:6em;
-	font-family: sans-serif;
-	letter-spacing: 0.1em;
-	
-}
-#kubwa span{
-	/*   */
-	display: inline-block;
-	animation:animate 3s linear forwards; 
-}
-@keyframes animate
-{
-0%{
-opacity: 0.1;
-transform: rotateY(90deg);
-filter:blur(10px);
-}
-0%{
-	opacity: 100%;
-	transform: rotateY(0deg);
-filter:blur(0px);
-}
-}
+
+	a {
+		text-decoration: none;
+		color: #eee;
+	}
+
+	#Victor {
+		background: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)), url("https://i.huffpost.com/gen/3762938/thumbs/o-SEN-1-900.jpg?7") center no-repeat;
+		background-size: cover;
+		background-repeat: no-repeat
+	}
+
+	.container {
+		max-width: 100%;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.menu-toggle {
+		position: fixed;
+		top: 2.5rem;
+		right: 2.5rem;
+		/* color: #eeeeee; */
+		font-size: 3rem;
+		cursor: pointer;
+		z-index: 1000;
+		display: none;
+		>>>>>>>upstream/master
+	}
+
+	nav {
+		padding-top: 5rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+	}
+
+	<<<<<<< HEAD=======.brand {
+		font-size: 3rem;
+		font-weight: 300;
+		transform: translateX(-100rem);
+		animation: slideIn .5s forwards;
+
+	}
+
+	#mbele {
+		color: rgb(255, 155, 24);
+
+		font-family: 'Poiret One', cursive;
+		margin-top: 220px;
+		font-size: 40px;
+
+	}
+
+	.brand span {
+		color: rgb(255, 155, 24);
+	}
+
+	nav ul {
+		display: flex;
+	}
+
+	nav ul li {
+		list-style: none;
+		transform: translateX(100rem);
+		animation: slideIn .5s forwards;
+	}
+
+	nav ul li:nth-child(1) {
+		animation-delay: 0s;
+
+	}
+
+	nav ul li:nth-child(2) {
+		animation-delay: .5s;
+	}
+
+	nav ul li:nth-child(3) {
+		animation-delay: 1s;
+	}
+
+	nav ul li:nth-child(4) {
+		animation-delay: 1.5s;
+	}
+
+	nav ul li a {
+		padding: 1rem 0;
+		margin: 0 3rem;
+		position: relative;
+		letter-spacing: 2px;
+	}
+
+	nav ul li a:last-child {
+		margin-right: 0;
+	}
+
+	nav ul li a::before,
+	nav ul li a::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: rgb(255, 155, 24);
+		left: 0;
+		transform: scaleX(0);
+		transition: all .5s;
+
+	}
+
+	nav ul li a::before {
+		top: 0;
+		transform-origin: left;
+	}
+
+	nav ul li a::after {
+		bottom: 0;
+		transform-origin: right;
+	}
+
+	nav ul li a:hover {
+		text-decoration-color: none;
+
+
+	}
+
+	.orange {
+		color: rgb(255, 155, 24);
+	}
+
+	.overlay {
+		background-color: rgba(0, 0, 0, .95);
+		position: fixed;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		transition: opacity 650ms;
+		transform: scale(0);
+		opacity: 0;
+		display: none;
+	}
+
+	nav ul li a:hover::before,
+	nav ul li a:hover::after {
+		transform: scaleX(1);
+
+	}
+
+	@keyframes slideIn {
+		from {}
+
+		to {
+			transform: translateX(0);
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+
+		.menu-toggle {
+			display: block;
+		}
+
+		nav {
+			padding-top: 0;
+			display: none;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			height: 100vh;
+			text-align: center;
+		}
+
+		nav ul {
+			flex-direction: column;
+		}
+
+		nav ul li {
+			margin-top: 5rem;
+		}
+
+		nav ul li a {
+			margin: 0;
+			font-size: 2.5rem;
+		}
+
+		.brand {
+			font-size: 5rem;
+		}
+
+		.overlay.menu-open,
+		nav.menu-open {
+			display: flex;
+			transform: scale(1);
+			opacity: 1;
+		}
+
+	}
+
+	section {
+		height: 100vh;
+
+	}
+
+	#kubwa {
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		margin-top: 240px;
+		transform: translateY(-50%);
+		width: 100%;
+		text-align: center;
+		color: #ddd;
+		font-size: 6em;
+		font-family: sans-serif;
+		letter-spacing: 0.1em;
+
+	}
+
+	#kubwa span {
+		/*   */
+		display: inline-block;
+		animation: animate 3s linear forwards;
+	}
+
+	@keyframes animate {
+		0% {
+			opacity: 0.1;
+			transform: rotateY(90deg);
+			filter: blur(10px);
+		}
+
+		0% {
+			opacity: 100%;
+			transform: rotateY(0deg);
+			filter: blur(0px);
+		}
+	}
 
 
 
------------------------------------------------
-/*aboutUs*/
- .names {
-	text-align: left;
-	font-size: 15px;
- }
- .ratings {
-	text-align: center;
- }
- 
+	-----------------------------------------------
 
-.about{
-	text-align: center;
-	padding-top: 100px;
-	padding-bottom: 150px;
-	
-}
-.about-heading{
-	font-size: 590px;
-}
-.about-quote{
-	font-size: 10px;
-	
-}
-.about-content{
-	font-size:20px;
-	font-family: 'Roboto', sans-serif;
+	/*aboutUs*/
+	.names {
+		text-align: left;
+		font-size: 15px;
+	}
 
-	
- 
-}
+	.ratings {
+		text-align: center;
+	}
 
 
+	.about {
+		text-align: center;
+		padding-top: 100px;
+		padding-bottom: 150px;
 
+	}
+
+	.about-heading {
+		font-size: 590px;
+	}
+
+	.about-quote {
+		font-size: 10px;
+
+	}
+
+	.about-content {
+		font-size: 20px;
+		font-family: 'Roboto', sans-serif;
+
+
+
+	}
