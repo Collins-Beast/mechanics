@@ -1,0 +1,18 @@
+{
+    "name": "Jon Doe",
+    "email": "jon@example.com",
+    "phone": "0710123456",
+    "password": "123456789",
+    "location": "Talai",
+    "licence": "1234567890",
+    "longitude": 35.29555,
+    "lattitude": 0.28417529999999996
+}
+
+APIs
+mechanic register: 
+    /mechanic/api/register
+mechanic login
+    /mechanic/api/login
+mechanic home
+    /mechanic/

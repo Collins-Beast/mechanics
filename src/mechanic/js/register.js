@@ -1,5 +1,24 @@
 $(document).ready(function () {
-    alert('loaded')
+  let longitude = "";
+  let lattitude = "";
+
+  $("#locator").on("click", function () {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        longitude = position.coords.longitude;
+        lattitude = position.coords.latitude;
+        console.log(longitude);
+        console.log(lattitude);
+        $("#locator")
+          .html("Success")
+          .addClass("btn-success")
+          .removeClass("btn-dark");
+      });
+    } else {
+      lattitude = 1;
+      longitude = 1;
+    }
+  });
   $("#form-register").on("change", function (e) {
     $("#info").html("");
   });
@@ -22,6 +41,10 @@ $(document).ready(function () {
     ) {
       return $("#info").html("Please enter a valid email address");
     }
+    var license = $("#licence").val();
+    if (license.length < 10) {
+      return $("#info").html("Please enter a valid license number");
+    }
     let user = {
       name: $("#name").val(),
       email: $("#email").val(),
@@ -29,9 +52,11 @@ $(document).ready(function () {
       password: $("#password").val(),
       location: $("#location").val(),
       licence: $("#licence").val(),
+      longitude,
+      lattitude,
     };
     console.log(user);
-    let url = "http://localhost:8080/api/register";
+    let url = "http://localhost:8080/mechanic/api/register";
     $.post(url, user, function (data, status) {
       console.log(data.code + " : " + status);
       if (data.code === 206) {

@@ -1,6 +1,7 @@
 const express = require("express");
 const Router = express.Router();
 const path = require("path");
+const { registration, login } = require("../controllers/mechanic");
 
 Router.get("/login", (req, res) => {
   // Return login form
@@ -12,14 +13,31 @@ Router.get("/register", (req, res) => {
   res.sendFile(path.join(__dirname, "../mechanic", "register.html"));
 });
 
-Router.get('/home', (req, res) => {
-  res.sendFile(path.join(__dirname, "../mechanic", "home.html"))
-})
-Router.post("/api/login", (req, res) => {
-  // Login handler
+Router.get("/home", (req, res) => {
+  res.sendFile(path.join(__dirname, "../mechanic", "home.html"));
 });
 
-Router.post("/api/register", (req, res) => {
-  // Register handler
-});
+// Mechanic login
+// mechanic/api/login
+// parameters license
+Router.post(
+  "/api/login",
+  (req, res, next) => {
+    // Login handler
+    next();
+  },
+  login
+);
+
+// Mechanic register
+// mechanic/api/register
+Router.post(
+  "/api/register",
+  (req, res, next) => {
+    // Register handler
+    console.log(req.body);
+    next();
+  },
+  registration
+);
 module.exports = Router;
