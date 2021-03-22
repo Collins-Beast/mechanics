@@ -74,19 +74,21 @@ const login = async function (req, res) {
           failed: "An error occurred",
         });
       }
+      console.log(results);
       if (results.length > 0) {
         let comparison = await bcrypt.compare(password, results[0].password);
-            console.log(comparison)
         if (comparison) {
           const token = jwt.sign(req.body, "SherlokH@lmes05Bakerst", {
             expiresIn: 360000,
           });
           res.status(200).json({ token: token, code: 200 });
+        } else {
+          res.json({
+            code: 204,
+            success: "Phone and password do not match",
+          });
+          return;
         }
-        return res.status(204).json({
-          code: 204,
-          success: "Phone and password do not match",
-        });
       } else {
         return res.status(206).json({
           code: 206,

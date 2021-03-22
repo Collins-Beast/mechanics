@@ -1,9 +1,125 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-    </head>
-    <body>
-        This is Home
-    </body>
+<!DOCTYPE html> 
+<html lang="en">
+  
+  <head>
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/home.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <style>
+        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+          background: greenyellow;
+          border-bottom: 2px solid yellow;
+        }
+        .nav1-item {
+            text-align: justify;
+        } 
+        </style>
+  </head>
+  <body>
+      <div class="container-fluid">
+    <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Mechanic Finder</a>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h3>Hello Mechanic  <span id="name"></h3></span></a>
+          </li>
+        </div>
+          <li class="nav1-item">
+            <button class="btn btn-warning" id="logout">Log Out</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+     <div class= "jumbotron"
+      <h1>Welcome Mechanic!</h1>
+      <ul class="nav nav-tabs">
+        <li class="nav-link active"><a href="#home">Home</a></li>
+        <li class="nav-item nav-link" >
+          <a href="#menu1">Orders <span class="badge badge-light" class="nav-item nav-link" >4</span></span> </a>
+        </li>
+        <li class="nav-item nav-link"><a href="#menu2">What Is New</a></li>
+      
+      </ul>
+
+      <div class="tab-content">
+        <div  class="tab-pane fade in active class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home-tab"">
+          <h3>HOME</h3>
+          <p>
+            yes yes mwangi kuja nikupige FIFA
+          </p>
+        </div>
+        <div class="tab-pane fade" class="tab-pane fade" id="menu1" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <h3>Menu 1</h3>
+          <p>
+            yes yes mwangi kuja nikupige FIFA, pia Anto ukuje. MKo na ufala sana nyinyi wote.
+          </p>
+        </div>
+        <div class="tab-pane fade" id="menu2" role="tabpanel" aria-labelledby="nav-profile-tab" class="tab-pane fade">
+          <h3>Menu 2</h3>
+          <p>
+            yes yes mwangi kuja nikupige FIFA
+          </p>
+        </div>
+        <div class="tab-pane fade" class="tab-pane fade" id="menu3" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <h3>Menu 3</h3>
+          <p>
+            yes yes mwangi kuja nikupige FIFA
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+    <script>
+      $(document).ready(function () {
+        $(".nav-tabs a").click(function () {
+          $(this).tab("show");
+        });
+      });
+    </script>
+  </body>
 </html>

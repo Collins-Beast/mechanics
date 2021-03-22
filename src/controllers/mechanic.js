@@ -82,12 +82,13 @@ const login = async function (req, res) {
         console.log(results);
         if (results.length > 0) {
           let comparison = await bcrypt.compare(password, results[0].password);
-          console.log(comparison);
+          req.body.name = results[0].name;
           if (comparison) {
             const token = jwt.sign(req.body, "SherlokH@lmes05Bakerst", {
               expiresIn: 360000,
             });
-            res.status(200).json({ token: token, code: 200 });
+            let name = results[0].name;
+            res.status(200).json({ token: token, name, code: 200 });
           }
           return res.json({
             code: 204,
@@ -105,4 +106,19 @@ const login = async function (req, res) {
     }
   );
 };
-module.exports = { registration, login };
+const getName = async function (req, res) {
+  try {
+    let { token } = req.body;
+    let decoded = await jwt.verify(token, "SherlokH@lmes05Bakerst");
+    console.log(decoded);
+    if (decoded) {
+      return res.json({ name: decoded.name });
+    } else {
+      return res.json({ name: "" });
+    }
+  } catch (error) {
+    console.log(error);
+    res.json({ name: "" });
+  }
+};
+module.exports = { registration, login, getName };
