@@ -1,44 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mechanic Finder | Register</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
-      integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    <script src="../js/bootstrap.js"></script>
-    <script src="js/register.js"></script>
-  </head>
 
-  <body>
+<head>
+    <title>Mechanic Finder | Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/register.js"></script>
+</head>
+
+<body>
     <div class="container">
-      <form class="form" id="form-register">
-        <fieldset>
-          <div id="legend">
-            <legend>Mechanic Register</legend>
-          </div>
-          <p class="text-danger" id="info"></p>
-          <div class="form-group">
-            <label class="col-sm-2 col-form-label" for="phone">Full Name</label>
-            <div class="col-sm-10">
-              <input
-                autocomplete="off"
-                type="text"
-                id="name"
-                name="phone"
-                placeholder="Full Name"
-                class="form-control input autocomplete='off'-xlarge"
-                required
-              />
-              <small class="help-block form-text text-muted" id="phone-info"
-                >Enter your name</small
+        <form class="form" id="form-register">
+            <fieldset>
+                <div id="legend">
+                    <legend>Mechanic Register</legend>
+                </div>
+                <p class="text-danger" id="info"></p>
+                <div class="form-group">
+                    <label class="col-sm-2 col-form-label" for="phone">Full Name</label>
+                    <div class="col-sm-10">
+                        <input autocomplete="off" type="text" id="name" name="phone" placeholder="Full Name" class="form-control input autocomplete='off'-xlarge" required />
+                        <small class="help-block form-text text-muted" id="phone-info">Enter your name</small
               >
             </div>
           </div>
@@ -78,11 +61,10 @@
                 class="help-block form-text text-muted"
                 id="email-info"
               ></small>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 col-form-label" for="license"
-              >Licence Number</label
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 col-form-label" for="license">Licence Number</label
             >
             <div class="col-sm-10">
               <input
@@ -152,19 +134,9 @@
 
           <div class="form-group">
             <label class="col-sm-2 col-form-label"> Confirm password</label>
-            <div class="col-sm-10">
-              <input
-                autocomplete="off"
-                required
-                type="password"
-                name="confirm-password"
-                id="confirm-password"
-                class="form-control input autocomplete='off'-xlarge"
-              />
-              <small
-                class="help-block form-text text-muted"
-                id="confirm-password-info"
-                >Please confirm password</small
+                    <div class="col-sm-10">
+                        <input autocomplete="off" required type="password" name="confirm-password" id="confirm-password" class="form-control input autocomplete='off'-xlarge" />
+                        <small class="help-block form-text text-muted" id="confirm-password-info">Please confirm password</small
               >
             </div>
           </div>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="css/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>Online mechanic finder</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $(document).ready(async function() {
+            let mechanics = await $.get("/mechanic/mechanics");
+            console.log(mechanics);
+            mechanics.map(function(mechanic) {
+                $("#mechanics").append(`<div id=` + mechanic.phone + `>
+                <div class="row myMechanics">
+                    <div class="col-md-4 names">
+                        <label>
+                          <h4>Name</h4>
+                        </label>
+                        <br />` +
+                    mechanic.name + `<br/>
+                        <label>
+                          <h4>Locality</h4>
+                        </label><br />` +
+                    mechanic.location + `
+                        <br />
+                        <label>
+                          <h4>Distance:</h4>
+                        </label><br />
+                    </div>
+                    <div class="col-md-4 images">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="images/image1.jpg" class="img-fluid" />
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="cont1">
+                                        <h2>Bsc in Mechanical and Mechatronics Engineering</h2>
+                                        <p>Expert in Solid Mechanics(engine expert)</p>
+
+                                    </div>
+                                    <button type="button" class="btn btn-primary" name="button" onclick="">
+                                    <h4>click to check Educational Background </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ratings">
+                      <h3>Ratings</h3>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-info btn-lg" onclick="modalCall()"  >
+                      <h3>Make An Appointment!</h3>
+                    </button>
+                                </div>
+                            </div>
+                        </div>`);
+            });
+        });
+    </script>
+    <div class="container">
+        <div class="allMechanics" id="mechanics"></div>
+    </div>
+</body>
+
+</html>

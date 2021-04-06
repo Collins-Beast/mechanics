@@ -27,6 +27,7 @@ $(document).ready(function () {
       phone: $("#phone").val(),
       password: $("#password").val(),
     };
+    
 
     let url = "http://localhost:8080/api/register";
     $.post(url, user, function (data, status) {

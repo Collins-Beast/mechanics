@@ -2,906 +2,494 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Selcting your location</title>
-  <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link href="css/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
-  <link href="css/styles.css" rel="stylesheet" type="text/css" />
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
-  <title>Online mechanic finder</title>
-  <style>
-      body {font-family: Arial, Helvetica, sans-serif;}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Selcting your location</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="css/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
 
-body {font-family: Arial, Helvetica, sans-serif;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: #a314e6; /* Fallback color */
-  background-color: rgba(224, 9, 153, 0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
-}
-
-/* The Close Button */
-.close {
-  color: red;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-
-.modal-body {padding: 2px 16px;}
-
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-h4  {
-  text-align: left;
-}
- #id01 {
-  background-color: lightblue;
-  color: black;
-  text-align: center;
-}
- #id02 {
-  background-color: white;
-  color: black;
-  padding: 40px;
-  text-align: center;
-}
-
-  </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>Online mechanic finder</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: #a314e6;
+            /* Fallback color */
+            background-color: rgba(224, 9, 153, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content */
+        
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+        /* Add Animation */
+        
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+        
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+        /* The Close Button */
+        
+        .close {
+            color: red;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+        
+        .modal-body {
+            padding: 2px 16px;
+        }
+        
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+        
+        h4 {
+            text-align: left;
+        }
+        
+        #id01 {
+            background-color: lightblue;
+            color: black;
+            text-align: center;
+        }
+        
+        #id02 {
+            background-color: white;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="inputs">
-      <div class="row">
-        <div class="col-12">
-          <h1>
-            <marquee>Find Our Mechanics</marquee>
-          </h1>
-          <form class="form1">
+    <div class="container">
+        <div class="inputs">
             <div class="row">
-              <div class="col-3 logo11"></div>
-              <div class="col-6">
-                <p id="ser"></p>
-                <label><strong>Location:</strong></label>
-                <select required id="locationSelection">
-                  <option>--Select The Type Of Service--</option>
-                  <option id="Langas" value="Langas">Langas</option>
-                  <option id="Kesses" value="Kesses">Kesses</option>
-                  <option id="Eldoret" value="Eldoret">Eldoret</option>
-                  <option id="Kpa" value="Kpa">Kpa</option>
-                  <option id="Pioneer" value="Pioneer">Pioneer</option>
-                  <option id="Annex" value="Annex">Annex</option>
-                  <option id="Mu" value="Mu">Mu</option>
-                </select><br /><br />
+                <div class="col-12">
+                    <h1>
+                        <marquee>Find Our Mechanics</marquee>
+                    </h1>
+                    <form class="form1">
+                        <div class="row">
+                            <div class="col-3 logo11"></div>
+                            <div class="col-6">
+                                <p id="ser"></p>
+                                <label><strong id="services"> Services:</strong></label>
+                                <select required id="locationSelection">
+                                    <option>--Select The Type Of Service--</option>
+                                    <option id="Brake Repair" value="Brake Repair">Brake Repair</option>
+                                    <option id="synthetic Oil change And Repair"
+                                        value="synthetic Oil change And Repair">synthetic Oil
+                                        change And Repair</option>
+                                    <option id="Engine Transmission and mantainance"
+                                        value="Engine Transmission and mantainance">Engine
+                                        Transmission and mantainance</option>
+                                    <option id="Heating and colling services" value="Heating and colling services">
+                                        Heating and cooling
+                                        services</option>
+                                    <option id="Tire Repair" value="Tire Repair">Tire Repair</option>
+                                    <option id="Electrical Faults and Repair" value="Electrical Faults and Repair">
+                                        Electrical Faults and
+                                        Repair</option>
+                                    <option id="General Mantainance" value="General Mantainance">General Mantainance
+                                    </option>
+                                </select><br/><br/>
+                                <label><strong> Car Model:</strong></label>
+                                <select required id="cars">
+                                    <option id="model">--Select Your Car Model--</option>
+                                    <option>Ford</option>
+                                    <option id="toyota" value="Toyota">Toyota</option>
+                                    <option id="nissan" value="Nissan">Nissan</option>
+                                    <option id="volvo" value="Volvo">Volvo</option>
+                                    <option id="range" value="Range Rover">Range Rover</option>
+                                    <option id="bmw" value="BMW">Truck</option>
+                                    <option id="mercedes" value="mercedes">Mercedes-Benz</option>
+                                    <option id="suzuki" value="suzuki">Suzuki</option>
+                                    <option id="subaru" value="subaru">Subaru</option>
+                                    <option id="motorcycle" value="motorcycle">MotorCycle</option>
+                                </select><br />
+                                <br />
+                                <form>
+                                    <div class="form-group">
+                                        <label for="comment" id="description">Write a Brief description of the
+                                            problem(leave blank if not
+                                            sure):</label>
+                                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                                    </div>
+                                    <br>
+                                    <button type="button" id="demo" class="btn m-3 btn-primary btn-lg" onclick="getLocation()">Click here
+                                        for us to know your location</button>
+                                    <div class="m-3" id='location-demo'></div>
+                                    <button type="button" class="btn btn-primary" onclick=" revealMechanics() ">Click to check
+                    available Mechanics.</button>
+                                </form>
+                                <br /><br />
+                            </div>
+                            <div class=" col-3 logo22 "></div>
+                        </div>
+                    </form>
+                </div>
 
-                <label><strong> Car Model:</strong></label>
-                <select required id="cars">
-                  <option>--Select Your Car Model--</option>
-                  <option>Ford</option>
-                  <option id="toyota" value="Toyota">Toyota</option>
-                  <option id="nissan" value="Nissan">Nissan</option>
-                  <option id="volvo" value="Volvo">Volvo</option>
-                  <option id="range" value="Range Rover">Range Rover</option>
-                  <option id="bmw" value="BMW">BMW</option>
-                </select><br />
-                <br />
-                <form>
-                  <div class="form-group">
-                    <label for="comment">Write a Brief description of the problem(leave blank if not sure):</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-
-                  </div>
-                  <br>
-                  <button type="button" id="demo" class="btn m-3 btn-primary btn-lg" onclick="getLocation()">Click here
-                    for us to know your location</button>
-                  <div class="m-3" id='location-demo'></div>
-                  <button type="button" class="btn btn-primary btn-lg" onclick="revealMechanics()">Click to check available Mechanics.</button>
-
-                </form>
+                <div class=" container ">
+                    <div class=" allMechanics hide" id="mechanics"></div>
+                </div>
+                <hr style="width:100%;">
 
 
-                <br /><br />
-              </div>
-              <div class="col-3 logo22"></div>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class=" modal-content ">
+                        <div class=" modal-header ">
+
+                            <div class=" row ">
+                                <div class=" col-sm-2 ">
+
+                                    <h5> <span class=" close " class=" w3-button w3-display-topright " onclick="removeModal()">&times;</span> </h5> <br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" row ">
+
+                            <div class=" col-sm-12 ">
+                                <h2> Dear Estemeed Cutomer, You are just a Step away from booking a Mechanic of Your Choice. Click to confirm or Cancel Your Selection </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" modal-body ">
+                        <div class=" row ">
+                            <div class=" col-sm-6 ">
+                                <button type=" button " id="confirmAppointment" class=" btn btn-primary btn-lg btn-block  btn btn-primary btn-lg " onclick="confirmSelection() ">
+                    <h3> Confirm Selection </h3>
+                  </button> </div>
+                            <div class=" col-sm-6 ">
+                                <button type=" button " class=" btn btn-dark btn-lg btn-block " onclick="removeModal()">
+                    <h3> Cancel Selection </h3>
+                  </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-          </form>
+
         </div>
-        <div class="allMechanics container"  id='allMechanics'>
-          <div class="mechanic mx-auto" id="Collins">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Collins<br />
-                <label><h4>Locality</h4></label><br />
-                Langas<br />
-                <label><h4>Car Models</h4></label><br />
-                <p>Ford, Range Rover, Toyota</p>
-              </div>
-
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/image1.jpg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont1">
-                        <h2>Collins</h2>
-                        <p>Mobile No: 0702252202</p>
-                        <p>Email: Collins@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-              <button type="button" button onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3>Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-          
-           
-
-          <div class="mechanic mx-auto" id="Ambrose">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Ambrose<br />
-                <label><h4>Locality</h4></label><br />
-                Langas<br />
-                <label><h4>Car Models</h4></label><br />
-                BMW, Nissan, Volvo
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/image2.jpg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont2">
-                        <h2>Ambrose</h2>
-                        <p>Mobile No: 0702255892</p>
-                        <p>Email: Ambrose@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-              <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3>Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="Nelly">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Nelly<br />
-                <label><h4>Locality</h4></label><br />
-                Kesses<br />
-                <label><h4>Car Models</h4></label><br />
-                Nissan, Volvo, Ford
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/image3.jpg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont3">
-                        <h2>Nelly</h2>
-                        <p>Mobile No: 0725952202</p>
-                        <p>Email: Nelly@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-              </div>
-               <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="Lawrence">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Lawrence<br />
-                <label><h4>Locality</h4></label><br />
-                Kesses<br />
-                <label><h4>Car Models</h4></label><br />
-                Toyota, Range Rover, BMW
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/mec17.jpeg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont4">
-                        <h2>Lawrence</h2>
-                        <p>Mobile No: 0725022202</p>
-                        <p>Email: Lawrence@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-              <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg" onclick =callModal()>
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="Willy">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Willy<br />
-                <label><h4>Locality</h4></label><br />
-                Eldoret<br />
-                <label><h4>Car Models</h4></label><br />
-                Nissan, Ford, Range Rover
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/image5.jpg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont5">
-                        <h2>Willy</h2>
-                        <p>Mobile No: 0725589202</p>
-                        <p>Email: Willy@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-              <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="Brian">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Brian <br />
-                <label><h4>Locality</h4></label><br />
-                Eldoret<br />
-                <label><h4>Car Models</h4></label><br />
-                Volvo, BMW, Toyota
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/image6.jpg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont6">
-                        <h2>Brian</h2>
-                        <p>Mobile No: 0725058202</p>
-                        <p>Email: Brian@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-               <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="Joseph">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Joseph<br />
-                <label><h4>Locality</h4></label><br />
-                Annex<br />
-                <label><h4>Car Models</h4></label><br />
-                Range Rover, Nissan, Volvo
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/image7.jpg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont7">
-                        <h2>Joseph</h2>
-                        <p>Mobile No: 0725058257</p>
-                        <p>Email: Joseph@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-              </div>
-               <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="faith">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Faith <br />
-                <label><h4>Locality</h4></label><br />
-                Annex<br />
-                <label><h4>Car Models</h4></label><br />
-                Ford, BMW, Toyota
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/mec16.jpeg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont8">
-                        <h2>Faith</h2>
-                        <p>Mobile No: 0725978202</p>
-                        <p>Email: faith@gmail.com</p>
-                      </div>
-                      <button type="button"  name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-               <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="Godwill">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Godwill<br />
-                <label><h4>Locality</h4></label><br />
-                Kpa<br />
-                <label><h4>Car Models</h4></label><br />
-                Range Rover, BMW, Toyota
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/mec17.jpeg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont9">
-                        <h2>Kpa</h2>
-                        <p>Mobile No: 0787058202</p>
-                        <p>Email: Godwill@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-               <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="Sharon">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Sharon<br />
-                <label><h4>Locality</h4></label><br />
-                Kpa<br />
-                <label><h4>Car Models</h4></label><br />
-                Nissan, Ford, Volvo
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/mec10.jpeg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont10">
-                        <h2>Sharon</h2>
-                        <p>Mobile No: 0725236202</p>
-                        <p>Email: Sharon@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-               <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="mwangi">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Jimna Mwangi<br />
-                <label><h4>Locality</h4></label><br />
-                Mu<br />
-                <label><h4>Car Models</h4></label><br />
-                Ford, BMW, Nissan
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/mec15.jpeg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont11">
-                        <h2>Mwangi</h2>
-                        <p>Mobile No: 0703336202</p>
-                        <p>Email: Mwangi@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-               <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="Wagod">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Wagod<br />
-                <label><h4>Locality</h4></label><br />
-                MU<br />
-                <label><h4>Car Models</h4></label><br />
-                Volvo, Range Rover, Toyota
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/mec11.jpeg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont12">
-                        <h2>Wagod Sammy</h2>
-                        <p>Mobile No: 0725232358</p>
-                        <p>Email:Wagod@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-               <button type="button" onclick= "modalCall()"class="btn btn-primary btn-lg">
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="Henry">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Henry Mburu<br />
-                <label><h4>Locality</h4></label><br />
-                Pioneer<br />
-                <label><h4>Car Models</h4></label><br />
-                Range Rover, BMW, Toyota
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/mec14.jpeg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont13">
-                        <h2>Henry Mburu</h2>
-                        <p>Mobile No: 0759876202</p>
-                        <p>Email: Henry@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-              </div>
-               <button type="button" onclick= "modalCall()" class="btn btn-primary btn-lg">
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-
-          <div class="mechanic mx-auto" id="mercy">
-            <div class="row myMechanics">
-              <div class="col-md-4 names">
-                <label> <h4>Name</h4></label><br />
-                Mercy <br />
-                <label><h4>Locality</h4></label><br />
-                pioneer<br />
-                <label><h4>Car Models</h4></label><br />
-                Volvo, Nissan, Ford
-              </div>
-              <div class="col-md-4 images">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="images/mec12.jpeg" class="img-fluid" />
-                    </div>
-                    <div class="flip-card-back">
-                      <div class="cont14">
-                        <h2>Mercy</h2>
-                        <p>Mobile No: 0725256972</p>
-                        <p>Email: mercy@gmail.com</p>
-                      </div>
-                      <button type="button" name="button" onclick="">
-                        Contact ME
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 ratings">
-                <h3>Ratings</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-               <button type="button"  class="btn btn-primary btn-lg" onclick= "modalCall()" >
-               <h3> Make An Appointment!</h3>
-              </button>
-            </div>
-          </div>
-  <!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-     
-       <div class="row">
-         <div class="col-sm-2">
-          
-     <h5> <span class="close"   class="w3-button w3-display-topright" onclick= "removeModal()">&times;</span> </h5> <br>
-      </div>
-     </div>
-     </div>
-     
-      <div class="row">
-
-     <div class="col-sm-12">
-      <h2> Dear Estemeed Cutomer, You are just a Step away from booking a Mechanic of Your Choice. Click to confirm or Cancel Your Selection  </h2>
-    </div>
-    </div>
-    </div>
-    <div class="modal-body">
-      <div class= "row">
-        <div class= "col-sm-6">
-     <button type="button"  class="btn btn-primary btn-lg btn-block" onclick="document.getElementById('id01').style.display='block'"
-         class="btn btn-primary btn-lg" ><h3> Confirm Selection </h3></button> </div>
-       <div class= "col-sm-6">
-          <button type="button" class="btn btn-primary btn-lg btn-block" onclick= "removeModal()"><h3>  Cancel Selection </h3></button>
-       </div>
-       </div>
-    
-    </div>
-    
-  </div>
-
-</div>
-
-</div>
- <div id="id01" class="w3-modal">
-        <div class="w3-modal-content w3-animate-zoom w3-card-4">
-          <header class="w3-container w3-teal" style="height: auto;">
-            <span
-              onclick="document.getElementById('id01').style.display='none'"
-              class="w3-button w3-display-topright"
+        <div id="id01" class=" w3-modal ">
+            <div class=" w3-modal-content w3-animate-zoom w3-card-4 ">
+                <header class=" w3-container w3-teal " style=" height: auto; ">
+                    <!--/<span
+              onclick=" document.getElementById( 'id01' ).style.display='none' "
+              class=" w3-button w3-display-topright "
               >&times;</span
-            >
-            <h1>SUCCESSFUL <span class="glyphicon glyphicon-ok" ></span> <span class="glyphicon glyphicon-ok" ></span></h1>
-          
-          </header>
-          <div class="w3-container" id="id02">
-            <h2>Your Order has been Recieved and Your Mechanic of choice will get to you as soon as possible</h2>
-           <a href= "index.html"> <button type="button" class="btn btn-primary btn-lg"><h2>Log Out</h2></button> </a>
-          
-            
-            
-          </div>
-          <footer class="w3-container w3-teal">
-            <p>Thank you for Choosing Online Mechanic Finder</p> <br>
-            
-          </footer>
-        
-      </div>
+            >-->
+                    <h1>SUCCESSFUL <span class=" glyphicon glyphicon-ok "></span> <span class=" glyphicon glyphicon-ok "></span>
+                    </h1>
+
+                </header>
+                <div class=" w3-container " id=" id02 ">
+                    <h2>Your Order has been Recieved and Your Mechanic of choice will get to you as soon as possible</h2>
+                    <a href=" http://127.0.0.1:8080/ "> <button type=" button " class=" btn btn-primary btn-lg ">
+                <h2>Log Out</h2>
+              </button> </a>
+                </div>
+                <footer class=" w3-container w3-teal ">
+                    <p>
+                        <h2>Thank you for Choosing Online Mechanic Finder
+                        </h2>
+                    </p><br>
+                </footer>
+            </div>
+        </div>
     </div>
 
+    <script>
+        $(document).ready(async function() {
+            let mechanics = await $.get("/mechanic/mechanics ");
+            console.log(mechanics);
+            let images = ["images/mec12.jpeg", "images/image1.jpg", "images/image3.jpg", "images/image2.jpg", "images/image7.jpg", "images/mec16.jpeg", "images/mech3.jpg", "images/mec12.jpeg", "images/mec9.jpeg", "images/mec17.jpeg", "images/mec14.jpeg", "images/mec14.jpeg", "images/mec15.jpeg", "images/mec17.jpeg", "images/mec9.jpeg", "images/image7.jpg", "images/mec14.jpeg", "images/mec16.jpeg", "images/mec9.jpeg"
 
-      </div>
+            ]
+            let education = [
+                ["Bsc in mechanical and mecheatronics", "Expert in solid mechanics(engine expert)"],
+                ["Diploma in General car mantainance", "expert in general mantainance"],
+                ["Certificate in mechnanics and meterials", "expert in engine transmission and mantainance"],
+                ["Diploman in general car mantainace", "expert in general car mantainance"],
+                ["Bsc in automotiveengineering", "expert in engine repair and mantrainance"],
+                ["Masters in mobile,automotive and transpportation", "expert in gerneal csr mantainance"],
+                ["Bsc in mechanical and mecheatronics", "Expert in solid mechanics(engine expert)"],
+                ["Diploma in General car mantainance", "expert in general mantainance"],
+                ["Certificate in mechnanics and meterials", "expert in engine transmission and mantainance"],
+                ["Diploman in general car mantainace", "expert in general car mantainance"],
+                ["Bsc in automotiveengineering", "expert in engine repair and mantrainance"],
+                ["Masters in mobile,automotive and transpportation", "expert in gerneal csr mantainance"],
+                ["Bsc in mechanical and mecheatronics", "Expert in solid mechanics(engine expert)"],
+                ["Diploma in General car mantainance", "expert in general mantainance"],
+                ["Certificate in mechnanics and meterials", "expert in engine transmission and mantainance"],
+                ["Diploman in general car mantainace", "expert in general car mantainance"],
+                ["Bsc in automotiveengineering", "expert in engine repair and mantrainance"],
+                ["Masters in mobile,automotive and transpportation", "expert in gerneal csr mantainance"],
+                ["Masters in mobile,automotive and transpportation", "expert in gerneal csr mantainance"]
+            ]
+            let distance = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-      <script>
-        var x = document.getElementById("location-demo");
+            mechanics.map(function(mechanic) {
+                mechanic.image = images["0", "1", "2", "3"]
+
+            })
+            const buildMap = (mechanics, images) => {
+                const map = new Map();
+                for (let i = 0; i < mechanics.length; i++) {
+                    map.set(mechanics[i], images[i]);
+                };
+                return map;
+            };
+            let image = buildMap(mechanics, images);
+
+            // const showEducation = (mechanics, education) => {
+            //     const map = new Map();
+            //     for (let i = 0; i < mechanics.length; i++) {
+            //         map.set(mechanics[i], education[i]);
+            //     };
+            //     return map;
+            // };
+            let educational = buildMap(mechanics, education);
+
+            const getDistance = (mechanics, distance) => {
+                const map = new Map();
+                for (let i = 0; i < mechanics.length; i++) {
+                    map.set(mechanics[i], images[i]);
+                };
+                return map;
+            };
+            const showEducation = (mechanics, education) => {
+                const map = new Map();
+                for (let i = 0; i < mechanics.length; i++) {
+                    map.set(mechanics[i], education[i]);
+                };
+                return map;
+            }
+            mechanics.map(function(mechanic) {
+                console.log(educational.get(mechanic));
+                $(" #mechanics ").append(`<div id=` + mechanic.phone + `>
+        <div class="row myMechanics">
+            <div class="col-md-4 names">
+                <label>
+                    <h4>Name</h4>
+                </label>
+                <br />` + mechanic.name + `<br />
+                <label>
+                    <h4>Locality</h4>
+                </label><br />` + mechanic.location + `
+                <br />
+                <label>
+                    <h4>Distance:</h4>
+                </label><br />
+            </div>
+            <div class="col-md-4 images">
+                <div class=" flip-card ">
+                    <div class=" flip-card-inner ">
+                        <div class=" flip-card-front ">
+                            <img src="` +
+                    image.get(mechanic) + `" class=" img-fluid " />
+                        </div>
+                        <div class=" flip-card-back ">
+                            <div class='cont1'>
+                                <h2>` + educational.get(mechanic)[0] + ` </h2>
+                                <p> ` + educational.get(mechanic)[1] + `
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ratings">
+            <h3> Ratings</h3>
+            <span class=" fa fa-star checked ">
+            </span>
+            <span class=" fa fa-star checked ">
+            </span>
+            <span class=" fa fa-star checked ">
+            </span>
+            <span class=" fa fa-star ">
+            </span>
+            <span class=" fa fa-star ">
+            </span>
+
+        </div>
+        </div>
+        
+        <button type="button" class="btn btn-primary" class="btn btn - primary btn - lg" onclick="modalCall()">
+            <h3>
+                <b> Make An Appointment!
+                </b>
+            </h3>
+        </button>
+        <br>
+        <br>
+        <hr style="height:2px;width:110%;color:red;background-color:gred ">
+    </div>`)
+
+            });
+        });
+
+
+        function confirmSelection() {
+            document.getElementById('id01').style.display = "block"
+        }
+        var x = document.getElementById(" location-demo ");
 
         function getLocation() {
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-          } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-          }
-        }
-        function revealMechanics(){
-          $('.mechanic').addClass('show').removeClass('mechanic')
-    
-        }
-        function showPosition(position) {
-          x.innerHTML = "Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude;
-        }
-                    // Get the modal
-          var modal = document.getElementById("myModal");
-
-          // Get the button that opens the modal
-         // var btn = document.getElementById("myBtn");
-
-          // Get the <span> element that closes the modal
-          var span = document.getElementsByClassName("close")[0];
-
-          // When the user clicks the button, open the modal 
-          btn.onclick = function() {
-            modal.style.display = "block";
-          }
-          function removeModal () { 
-            modal.style.display = "none"
-
-          }
-          function modalCall () {
-           let modal= document.getElementById("myModal");
-           modal.style.display= "block"
-
-          }
-
-
-          // When the user clicks on <span> (x), close the modal
-          span.onclick = function() {
-            modal.style.display = "none";
-          }
-
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function(event) {
-            if (event.target == modal) {
-              modal.style.display = "none";
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = " Geolocation is not supported by this browser. ";
             }
-          }
+        }
 
-              
-      </script>
+        function revealMechanics() {
+            console.log(revealMechanics)
+            $('#mechanics').addClass('show').removeClass('hide')
+
+        }
+
+        function showPosition(position) {
+            let x = document.getElementById('location-demo');
+            x.innerHTML = " Latitude: " + position.coords.latitude +
+                " <br>Longitude: " + position.coords.longitude;
+        } // Get the modal var modal = document.getElementById("myModal"); // Get the button that opens the modal // var btn = document.getElementById("myBtn");
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        let button = document.getElementById("")
+        onclick = function() {
+            modal.style.display = "block"
+        }
+
+        function removeModal() {
+            let modal = document.getElementById('myModal')
+            modal.style.display = "none"
+        }
+
+        function modalCall() {
+            let modal = document.getElementById("myModal");
+            modal.style.display = "block"
+
+        }
+
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            let modal = document.getElementById('myModal')
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            let modal = function closeModal() {
+                onclick = "removeModal()"
+            }
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        let confirmAppointment = document.getElementById("confirmAppointment");
+        //  console.log(confirmAppointment) confirmAppointment.addEventListener("click", function() {
+        //   let appointment = {
+        //  Name: document.getElementByValue("").val(),
+        //Datetime: Date.now(),
+        // Contacts: document.getElementByValue("").val(),
+        //typeOfService: document.getElementByValue("#services").val(),
+        //carModel: document.getElementByValue("#model").val(),
+        //briefDescription: document.getElementByValue("#description").val(),
+        //};
+        //  document.getElemetById("").innerHtml = "";
+        //  });
+    </script>
 </body>
 
 </html>

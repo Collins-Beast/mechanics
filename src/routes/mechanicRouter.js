@@ -1,11 +1,17 @@
 const express = require("express");
 const Router = express.Router();
 const path = require("path");
-const { registration, login, getName } = require("../controllers/mechanic");
+const {
+  registration,
+  login,
+  getName,
+  getMechanics,
+} = require("../controllers/mechanic");
 
 Router.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "../mechanic", "home.html"));
 });
+Router.get("/mechanics",getMechanics);
 Router.get("/login", (req, res) => {
   // Return login form
   res.sendFile(path.join(__dirname, "../mechanic", "login.html"));
@@ -50,4 +56,5 @@ Router.post(
   },
   registration
 );
+
 module.exports = Router;

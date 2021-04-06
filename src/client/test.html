@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test
+    </title>
+</head>
+
+<body>
+    <div id=` + mechanic.phone + `>
+        <div class="row myMechanics">
+            <div class="col-md-4 names">
+                <label>
+                    <h4>Name</h4>
+                </label>
+                <br />` + mechanic.name + `<br />
+                <label>
+                    <h4>Locality</h4>
+                </label><br />` + mechanic.location + `
+                <br />
+                <label>
+                    <h4>Distance:</h4>
+                </label><br />
+            </div>
+            <div class="col-md-4 images">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="` +
+                                image.get(mechanic) + `" class=" img-fluid " />
+                        </div>
+                        <div class=" flip-card-back ">
+                            <div class='const1'>
+                                <h2>` + educational.get(mechanic)[0] + ` </h2>
+                                <p> ` + educational.get(mechanic)[1] + `
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-md-4 ratings ">
+                    <h3> Ratings</h3>
+                    <span class=" fa fa-star checked ">
+            </span>
+                    <span class=" fa fa-star checked ">
+            </span>
+                    <span class=" fa fa-star checked ">
+            </span>
+                    <span class=" fa fa-star ">
+            </span>
+                    <span class=" fa fa-star ">
+            </span>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg" onclick="modalCall()">
+            <h3>
+                <b> Make An Appointment!
+                </b>
+            </h3>
+        </button>
+                <br>
+                <br>
+                <hr style="height:2px;width:110%;color:red;background-color:gred ">
+            </div>
+</body>
+
+</html>
