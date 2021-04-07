@@ -194,14 +194,14 @@
                                         <label for="comment" id="description">Write a Brief description of the
                                             problem(leave blank if not
                                             sure):</label>
-                                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                                        <textarea class="form-control"  class="input-group input-group-lg" style="font-size: 2rem; color:red; font-family: Arial, Helvetica, sans-serif;" rows="5" id="comment"></textarea>
                                     </div>
                                     <br>
-                                    <button type="button" id="demo" class="btn m-3 btn-primary btn-lg" onclick="getLocation()">Click here
+                                    <button type="button" id="demo" class="btn m-3 btn-primary btn-lg" style="font-size: 1.5rem;" onclick="getLocation()">Click here
                                         for us to know your location</button>
                                     <div class="m-3" id='location-demo'></div>
-                                    <button type="button" class="btn btn-primary" onclick=" revealMechanics() ">Click to check
-                    available Mechanics.</button>
+                                    <button type="button" class="btn btn-primary"style="font-size: 1.5rem;" onclick=" revealMechanics() "<h4>Click to check
+                    available Mechanics.</h3></button>
                                 </form>
                                 <br /><br />
                             </div>
@@ -339,12 +339,20 @@
             let educational = buildMap(mechanics, education);
 
             const getDistance = (mechanics, distance) => {
+
                 const map = new Map();
                 for (let i = 0; i < mechanics.length; i++) {
-                    map.set(mechanics[i], images[i]);
+                    map.set(mechanics[i], distance[i]);
                 };
                 return map;
+
             };
+            console.log(getDistance(mechanics,distance));
+            let showDistance= (mechanics,distance)=>{
+                console.log(distance);
+                
+            }
+            showDistance(mechanics,distance)
             const showEducation = (mechanics, education) => {
                 const map = new Map();
                 for (let i = 0; i < mechanics.length; i++) {
@@ -366,7 +374,8 @@
                 </label><br />` + mechanic.location + `
                 <br />
                 <label>
-                    <h4>Distance:</h4>
+                    <h4>Distance:` +
+                    getDistance(mechanics,distance).get(mechanic) + `</h4>
                 </label><br />
             </div>
             <div class="col-md-4 images">

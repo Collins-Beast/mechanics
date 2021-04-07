@@ -262,7 +262,7 @@ marquee {
     background-image: url("../images/logo4.jpeg");
     background-repeat: no-repeat;
     /*(to control the repetion of an image*/
-    background-position: center;
+    background-position: top;
     /*to control the position of  image */
     animation: animate 3s linear forwards;
 }
