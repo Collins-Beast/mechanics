@@ -131,5 +131,16 @@ function getMechanics(req, res) {
         return res.json(result);
     });
 }
-
+function getDetails(req, res) {
+  connection.query(`SELECT * FROM orders`,
+    function (error, result, info) {
+      if (error) {
+        console.log(error.message);
+        return res.json({ success: false });
+      }
+      console.log(result);
+      return res.json(result);
+    }
+  );
+}
 module.exports = { registration, login, getName, getMechanics };

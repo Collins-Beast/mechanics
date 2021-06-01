@@ -17,19 +17,21 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <title>Online mechanic finder</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
-        
+
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+
         /* The Modal (background) */
-        
+
         .modal {
             display: none;
             /* Hidden by default */
@@ -52,8 +54,9 @@
             background-color: rgba(224, 9, 153, 0.4);
             /* Black w/ opacity */
         }
+
         /* Modal Content */
-        
+
         .modal-content {
             position: relative;
             background-color: #fefefe;
@@ -67,71 +70,75 @@
             animation-name: animatetop;
             animation-duration: 0.4s
         }
+
         /* Add Animation */
-        
+
         @-webkit-keyframes animatetop {
             from {
                 top: -300px;
                 opacity: 0
             }
+
             to {
                 top: 0;
                 opacity: 1
             }
         }
-        
+
         @keyframes animatetop {
             from {
                 top: -300px;
                 opacity: 0
             }
+
             to {
                 top: 0;
                 opacity: 1
             }
         }
+
         /* The Close Button */
-        
+
         .close {
             color: red;
             float: right;
             font-size: 28px;
             font-weight: bold;
         }
-        
+
         .close:hover,
         .close:focus {
             color: #000;
             text-decoration: none;
             cursor: pointer;
         }
-        
+
         .modal-header {
             padding: 2px 16px;
             background-color: #5cb85c;
             color: white;
         }
-        
+
         .modal-body {
             padding: 2px 16px;
         }
-        
+
         .modal-footer {
             padding: 2px 16px;
             background-color: #5cb85c;
             color: white;
         }
-        
+
         h4 {
             text-align: left;
         }
-        
+
         #id01 {
             background-color: lightblue;
             color: black;
             text-align: center;
         }
-        
+
         #id02 {
             background-color: white;
             color: black;
@@ -154,7 +161,7 @@
                             <div class="col-3 logo11"></div>
                             <div class="col-6">
                                 <p id="ser"></p>
-                                <label><strong id="services"> Services:</strong></label>
+                                <label><strong> Services:</strong></label>
                                 <select required id="locationSelection">
                                     <option>--Select The Type Of Service--</option>
                                     <option id="Brake Repair" value="Brake Repair">Brake Repair</option>
@@ -173,7 +180,7 @@
                                         Repair</option>
                                     <option id="General Mantainance" value="General Mantainance">General Mantainance
                                     </option>
-                                </select><br/><br/>
+                                </select><br /><br />
                                 <label><strong> Car Model:</strong></label>
                                 <select required id="cars">
                                     <option id="model">--Select Your Car Model--</option>
@@ -194,14 +201,18 @@
                                         <label for="comment" id="description">Write a Brief description of the
                                             problem(leave blank if not
                                             sure):</label>
-                                        <textarea class="form-control"  class="input-group input-group-lg" style="font-size: 2rem; color:red; font-family: Arial, Helvetica, sans-serif;" rows="5" id="comment"></textarea>
+                                        <textarea class="form-control" id="brief" class="input-group input-group-lg"
+                                            style="font-size: 2rem; color:red; font-family: Arial, Helvetica, sans-serif;"
+                                            rows="5" id="comment"></textarea>
                                     </div>
                                     <br>
-                                    <button type="button" id="demo" class="btn m-3 btn-primary btn-lg" style="font-size: 1.5rem;" onclick="getLocation()">Click here
+                                    <button type="button" id="demo" class="btn m-3 btn-primary btn-lg"
+                                        style="font-size: 1.5rem;" onclick="getLocation()">Click here
                                         for us to know your location</button>
                                     <div class="m-3" id='location-demo'></div>
-                                    <button type="button" class="btn btn-primary"style="font-size: 1.5rem;" onclick=" revealMechanics() "<h4>Click to check
-                    available Mechanics.</h3></button>
+                                    <button type="button" class="btn btn-primary" style="font-size: 1.5rem;"
+                                        onclick=" revealMechanics() " <h4>Click to check
+                                        available Mechanics.</h3></button>
                                 </form>
                                 <br /><br />
                             </div>
@@ -226,7 +237,8 @@
                             <div class=" row ">
                                 <div class=" col-sm-2 ">
 
-                                    <h5> <span class=" close " class=" w3-button w3-display-topright " onclick="removeModal()">&times;</span> </h5> <br>
+                                    <h5> <span class=" close " class=" w3-button w3-display-topright "
+                                            onclick="removeModal()">&times;</span> </h5> <br>
                                 </div>
                             </div>
                         </div>
@@ -234,20 +246,23 @@
                         <div class=" row ">
 
                             <div class=" col-sm-12 ">
-                                <h2> Dear Estemeed Cutomer, You are just a Step away from booking a Mechanic of Your Choice. Click to confirm or Cancel Your Selection </h2>
+                                <h2> Dear Estemeed Cutomer, You are just a Step away from booking a Mechanic of Your
+                                    Choice. Click to confirm or Cancel Your Selection </h2>
                             </div>
                         </div>
                     </div>
                     <div class=" modal-body ">
                         <div class=" row ">
                             <div class=" col-sm-6 ">
-                                <button type=" button " id="confirmAppointment" class=" btn btn-primary btn-lg btn-block  btn btn-primary btn-lg " onclick="confirmSelection() ">
-                    <h3> Confirm Selection </h3>
-                  </button> </div>
+                                <button type=" button " id="confirmAppointment"
+                                    class=" btn btn-primary btn-lg btn-block  btn btn-primary btn-lg "
+                                    onclick="confirmSelection() ">
+                                    <h3> Confirm Selection </h3>
+                                </button> </div>
                             <div class=" col-sm-6 ">
                                 <button type=" button " class=" btn btn-dark btn-lg btn-block " onclick="removeModal()">
-                    <h3> Cancel Selection </h3>
-                  </button>
+                                    <h3> Cancel Selection </h3>
+                                </button>
                             </div>
                         </div>
 
@@ -266,15 +281,17 @@
               class=" w3-button w3-display-topright "
               >&times;</span
             >-->
-                    <h1>SUCCESSFUL <span class=" glyphicon glyphicon-ok "></span> <span class=" glyphicon glyphicon-ok "></span>
+                    <h1>SUCCESSFUL <span class=" glyphicon glyphicon-ok "></span> <span
+                            class=" glyphicon glyphicon-ok "></span>
                     </h1>
 
                 </header>
                 <div class=" w3-container " id=" id02 ">
-                    <h2>Your Order has been Recieved and Your Mechanic of choice will get to you as soon as possible</h2>
+                    <h2>Your Order has been Recieved and Your Mechanic of choice will get to you as soon as possible
+                    </h2>
                     <a href=" http://127.0.0.1:8080/ "> <button type=" button " class=" btn btn-primary btn-lg ">
-                <h2>Log Out</h2>
-              </button> </a>
+                            <h2>Log Out</h2>
+                        </button> </a>
                 </div>
                 <footer class=" w3-container w3-teal ">
                     <p>
@@ -287,36 +304,51 @@
     </div>
 
     <script>
-        $(document).ready(async function() {
+        $(document).ready(async function () {
             let mechanics = await $.get("/mechanic/mechanics ");
-            console.log(mechanics);
-            let images = ["images/mec12.jpeg", "images/image1.jpg", "images/image3.jpg", "images/image2.jpg", "images/image7.jpg", "images/mec16.jpeg", "images/mech3.jpg", "images/mec12.jpeg", "images/mec9.jpeg", "images/mec17.jpeg", "images/mec14.jpeg", "images/mec14.jpeg", "images/mec15.jpeg", "images/mec17.jpeg", "images/mec9.jpeg", "images/image7.jpg", "images/mec14.jpeg", "images/mec16.jpeg", "images/mec9.jpeg"
+            // console.log(mechanics);
+            let images = ["images/mec17.jpeg", "images/image3.jpg", "images/mec17.jpeg",
+                "images/image2.jpg", "images/image7.jpg", "images/image6.jpg", "images/mec13.jpeg",
+                "images/mec12.jpeg", "images/mec9.jpeg", "images/mec17.jpeg", "images/mec14.jpeg",
+                "images/image2.jpg", "images/mec15.jpeg", "images/mec10.jpeg", "images/mec11.jpeg",
+                "images/image7.jpg", "images/2mec15.jpeg", "images/mec16.jpeg", "images/mec8.jpeg"
 
             ]
             let education = [
                 ["Bsc in mechanical and mecheatronics", "Expert in solid mechanics(engine expert)"],
+                ["Diploma in General car mantainance", "Expert in general car mantainance"],
+                ["Certificate in mechanics and meterials",
+                    "Expert in engine transmission and mantainance"
+                ],
+                ["Diploma in general car mantainace", "Expert in general car mantainance"],
+                ["Bsc in automotive engineering", "Expert in engine repair and mantrainance"],
+                ["Masters in mobile,automotive and transportation",
+                "Expert in general car mantainance"],
+                ["Bsc in mechanical and mechatronics", "Expert in solid mechanics(engine expert)"],
                 ["Diploma in General car mantainance", "expert in general mantainance"],
-                ["Certificate in mechnanics and meterials", "expert in engine transmission and mantainance"],
-                ["Diploman in general car mantainace", "expert in general car mantainance"],
-                ["Bsc in automotiveengineering", "expert in engine repair and mantrainance"],
-                ["Masters in mobile,automotive and transpportation", "expert in gerneal csr mantainance"],
-                ["Bsc in mechanical and mecheatronics", "Expert in solid mechanics(engine expert)"],
+                ["Certificate in mechnanics and meterials",
+                    "expert in engine transmission and mantainance"
+                ],
+                ["Diploma in general car mantainace", "expert in general car mantainance"],
+                ["Bsc in automotive engineering", "expert in engine repair and mantrainance"],
+                ["Masters in mobile,automotive and transportation",
+                "expert in general car mantainance"],
+                ["Bsc in mechanical and mechatronics", "Expert in solid mechanics(engine expert)"],
                 ["Diploma in General car mantainance", "expert in general mantainance"],
-                ["Certificate in mechnanics and meterials", "expert in engine transmission and mantainance"],
-                ["Diploman in general car mantainace", "expert in general car mantainance"],
-                ["Bsc in automotiveengineering", "expert in engine repair and mantrainance"],
-                ["Masters in mobile,automotive and transpportation", "expert in gerneal csr mantainance"],
-                ["Bsc in mechanical and mecheatronics", "Expert in solid mechanics(engine expert)"],
-                ["Diploma in General car mantainance", "expert in general mantainance"],
-                ["Certificate in mechnanics and meterials", "expert in engine transmission and mantainance"],
-                ["Diploman in general car mantainace", "expert in general car mantainance"],
-                ["Bsc in automotiveengineering", "expert in engine repair and mantrainance"],
-                ["Masters in mobile,automotive and transpportation", "expert in gerneal csr mantainance"],
-                ["Masters in mobile,automotive and transpportation", "expert in gerneal csr mantainance"]
+                ["Certificate in mechnanics and meterials",
+                    "expert in engine transmission and mantainance"
+                ],
+                ["Diploma in general car mantainace", "expert in general car mantainance"],
+                ["Bsc in automotive engineering", "expert in engine repair and mantrainance"],
+                ["Masters in mobile,automotive and transportation",
+                "expert in general car mantainance"],
+                ["Masters in mobile,automotive and transportation", "expert in general car mantainance"]
             ]
-            let distance = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            let distance = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "1", "2", "3", "4", "5", "6", "7",
+                "8", "9", "10"
+            ]
 
-            mechanics.map(function(mechanic) {
+            mechanics.map(function (mechanic) {
                 mechanic.image = images["0", "1", "2", "3"]
 
             })
@@ -347,12 +379,12 @@
                 return map;
 
             };
-            console.log(getDistance(mechanics,distance));
-            let showDistance= (mechanics,distance)=>{
-                console.log(distance);
-                
+            // console.log(getDistance(mechanics, distance));
+            let showDistance = (mechanics, distance) => {
+                // console.log(distance);
+
             }
-            showDistance(mechanics,distance)
+            showDistance(mechanics, distance)
             const showEducation = (mechanics, education) => {
                 const map = new Map();
                 for (let i = 0; i < mechanics.length; i++) {
@@ -360,8 +392,8 @@
                 };
                 return map;
             }
-            mechanics.map(function(mechanic) {
-                console.log(educational.get(mechanic));
+            mechanics.map(function (mechanic) {
+                // console.log(educational.get(mechanic));
                 $(" #mechanics ").append(`<div id=` + mechanic.phone + `>
         <div class="row myMechanics">
             <div class="col-md-4 names">
@@ -375,7 +407,7 @@
                 <br />
                 <label>
                     <h4>Distance:` +
-                    getDistance(mechanics,distance).get(mechanic) + `</h4>
+                    getDistance(mechanics, distance).get(mechanic) + `</h4>
                 </label><br />
             </div>
             <div class="col-md-4 images">
@@ -411,7 +443,7 @@
         </div>
         </div>
         
-        <button type="button" class="btn btn-primary" class="btn btn - primary btn - lg" onclick="modalCall()">
+        <button id="` + mechanic.name + `" type="button" class="btn btn-primary" class="btn btn - primary btn - lg" onclick="modalCall(event)">
             <h3>
                 <b> Make An Appointment!
                 </b>
@@ -425,6 +457,9 @@
             });
         });
 
+        let mechanicName = 'Jon Doe'
+        let latitude = 0;
+        let longtitude = 0;
 
         function confirmSelection() {
             document.getElementById('id01').style.display = "block"
@@ -440,7 +475,7 @@
         }
 
         function revealMechanics() {
-            console.log(revealMechanics)
+            // console.log(revealMechanics)
             $('#mechanics').addClass('show').removeClass('hide')
 
         }
@@ -449,13 +484,15 @@
             let x = document.getElementById('location-demo');
             x.innerHTML = " Latitude: " + position.coords.latitude +
                 " <br>Longitude: " + position.coords.longitude;
+            latitude = position.coords.latitude;
+            longtitude = position.coords.longtitude;
         } // Get the modal var modal = document.getElementById("myModal"); // Get the button that opens the modal // var btn = document.getElementById("myBtn");
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal
         let button = document.getElementById("")
-        onclick = function() {
+        onclick = function () {
             modal.style.display = "block"
         }
 
@@ -464,21 +501,21 @@
             modal.style.display = "none"
         }
 
-        function modalCall() {
+        function modalCall(event) {
             let modal = document.getElementById("myModal");
             modal.style.display = "block"
-
+            mechanicName = event.target.id
         }
 
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
+        span.onclick = function () {
             let modal = document.getElementById('myModal')
             modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             let modal = function closeModal() {
                 onclick = "removeModal()"
             }
@@ -486,18 +523,33 @@
                 modal.style.display = "none";
             }
         }
+
+        const getToken = () => {
+            const query = window.location.search
+            const urlParams = new URLSearchParams(query)
+            const token = urlParams.get('token')
+            return token
+        }
+        let token = getToken()
         let confirmAppointment = document.getElementById("confirmAppointment");
-        //  console.log(confirmAppointment) confirmAppointment.addEventListener("click", function() {
-        //   let appointment = {
-        //  Name: document.getElementByValue("").val(),
-        //Datetime: Date.now(),
-        // Contacts: document.getElementByValue("").val(),
-        //typeOfService: document.getElementByValue("#services").val(),
-        //carModel: document.getElementByValue("#model").val(),
-        //briefDescription: document.getElementByValue("#description").val(),
-        //};
-        //  document.getElemetById("").innerHtml = "";
-        //  });
+        // console.log(confirmAppointment)
+        confirmAppointment.addEventListener("click", async function () {
+            let appointment = {
+                name: '',
+                datetime: new Date(),
+                typeOfService: document.getElementById("locationSelection").value,
+                carModel: document.getElementById("cars").value,
+                briefDescription: document.getElementById("brief").value,
+                contacts: '',
+                mechanic: mechanicName,
+                latitude: latitude,
+                longtitude: longtitude,
+                token,
+            };
+            const url = '/appointment'
+            const appointmentResult = await $.post(url, appointment);
+            console.log(appointmentResult)
+        });
     </script>
 </body>
 

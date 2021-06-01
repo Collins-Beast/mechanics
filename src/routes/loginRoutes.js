@@ -74,7 +74,8 @@ const login = async function (req, res) {
           failed: "An error occurred",
         });
       }
-      console.log(results);
+      const user = Object.values(JSON.parse(JSON.stringify(results)));
+      req.body.name = user[0].name
       if (results.length > 0) {
         let comparison = await bcrypt.compare(password, results[0].password);
         if (comparison) {
@@ -111,7 +112,7 @@ const isLoggedIn = function (req, res, next) {
       console.log(err.message);
       return res.status(403).json({ error: "Please login first" });
     }
-    console.log(decode);
+    console.log(decode)
     return next();
   });
 };

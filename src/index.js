@@ -52,8 +52,12 @@ router.get("/home", handlers.isLoggedIn, function(req, res) {
     return res.sendFile(path.join(__dirname, "client", "home.html"));
 });
 
-console.log(path.join(__dirname, "mechanic/"));
 
+// Saving customer appointments
+router.post('/appointment', handlers.isLoggedIn, function(req,res){
+    console.log(req.user)
+    res.send('success')
+})
 app.use(express.static(path.join(__dirname, "client")));
 app.use(express.static(path.join(__dirname, "mechanic")));
 
