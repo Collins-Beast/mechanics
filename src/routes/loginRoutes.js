@@ -41,8 +41,8 @@ const registration = async function (req, res) {
           success: "That phone number is already registered.",
         });
       }
-    }
-  );
+    
+  
   connection.query(
     "INSERT INTO user SET ?",
     users,
@@ -60,7 +60,9 @@ const registration = async function (req, res) {
       });
     }
   );
+  });
 };
+
 const login = async function (req, res) {
   var phone = req.body.phone;
   var password = req.body.password;
@@ -112,7 +114,7 @@ const isLoggedIn = function (req, res, next) {
       console.log(err.message);
       return res.status(403).json({ error: "Please login first" });
     }
-    console.log(decode)
+    req.user = decode
     return next();
   });
 };

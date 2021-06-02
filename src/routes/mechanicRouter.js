@@ -51,7 +51,6 @@ Router.post(
   "/api/register",
   (req, res, next) => {
     // Register handler
-    console.log(req.body);
     next();
   },
   registration

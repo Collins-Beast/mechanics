@@ -7,6 +7,7 @@ const path = require("path");
 const mechanicRouter = require("./routes/mechanicRouter.js");
 const morgan = require("morgan");
 
+const { storeAppointment } = require("./controllers/mechanic");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
@@ -55,7 +56,33 @@ router.get("/home", handlers.isLoggedIn, function(req, res) {
 
 // Saving customer appointments
 router.post('/appointment', handlers.isLoggedIn, function(req,res){
-    console.log(req.user)
+    req.body.name = req.user.name
+    req.body.contacts = req.user.phone
+    console.log(req.body)
+    let dateTime = new Date().toISOString().slice(0, 19).replace("T", " ");
+    const appointment = {
+      date_time: dateTime,
+      services: req.body.typeOfService,
+      brief_description: req.body.briefDescription,
+      latitude: req.body.latitude,
+      longtitude: req.body.longtitude,
+      contacts: req.body.contacts,
+      name: req.body.name,
+      car_model: req.body.carModel,
+      mechanic: req.body.mechanic,
+    };
+    storeAppointment(appointment,res)
+//     {
+//   name: 'mmmmm',
+//   datetime: 'Tue Jun 01 2021 21:17:18 GMT+0300 (East Africa Time)',
+//   typeOfService: 'Engine Transmission and mantainance',
+//   carModel: 'mercedes',
+//   briefDescription: '',
+//   contacts: '0725558806',
+//   mechanic: 'Jon Doe',
+//   latitude: '-1.2877824',
+//   token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjA3MjU1NTg4MDYiLCJwYXNzd29yZCI6IjEyMzQ1IiwibmFtZSI6Im1tbW1tIiwiaWF0IjoxNjIyNTY5NjU1LCJleHAiOjE2MjI5Mjk2NTV9.IxcmECySlLbA66jU1tl7C59m83UcgeZB6fcAaCqXfs4'
+// }
     res.send('success')
 })
 app.use(express.static(path.join(__dirname, "client")));

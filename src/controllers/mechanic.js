@@ -127,7 +127,6 @@ function getMechanics(req, res) {
             console.log(error.message);
             return res.json({ success: false });
         }
-        console.log(result);
         return res.json(result);
     });
 }
@@ -143,4 +142,20 @@ function getDetails(req, res) {
     }
   );
 }
-module.exports = { registration, login, getName, getMechanics };
+function storeAppointment (req, res){
+    let appointment= req ;
+    connection.query(
+      "INSERT INTO order_to_mechanic SET ?",
+      appointment,
+      function (error, results, fields) {
+        if (error) {
+          console.log(error);
+          
+        }
+     } )
+
+      
+    
+         
+}
+module.exports = { registration, login, getName, getMechanics, storeAppointment };

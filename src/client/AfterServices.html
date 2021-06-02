@@ -180,6 +180,8 @@
                                         Repair</option>
                                     <option id="General Mantainance" value="General Mantainance">General Mantainance
                                     </option>
+                                    <option id="Any other" value="Any other">Any other
+                                    </option>
                                 </select><br /><br />
                                 <label><strong> Car Model:</strong></label>
                                 <select required id="cars">
@@ -207,7 +209,7 @@
                                     </div>
                                     <br>
                                     <button type="button" id="demo" class="btn m-3 btn-primary btn-lg"
-                                        style="font-size: 1.5rem;" onclick="getLocation()">Click here
+                                        style="font-size: 1.5rem;" onclick= "getLocation()">Click here
                                         for us to know your location</button>
                                     <div class="m-3" id='location-demo'></div>
                                     <button type="button" class="btn btn-primary" style="font-size: 1.5rem;"
@@ -344,8 +346,8 @@
                 "expert in general car mantainance"],
                 ["Masters in mobile,automotive and transportation", "expert in general car mantainance"]
             ]
-            let distance = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "1", "2", "3", "4", "5", "6", "7",
-                "8", "9", "10"
+            let distance = ["1 km", "2km", "3 km", "4 km", "5 km", "6 km", "7 km", "8 km", "9 km", "1 km", "2 km", "3 km", "4 km", "5 km", "6 km", "7 km",
+                "8 km", "9 km", "10 km"
             ]
 
             mechanics.map(function (mechanic) {
@@ -443,7 +445,7 @@
         </div>
         </div>
         
-        <button id="` + mechanic.name + `" type="button" class="btn btn-primary" class="btn btn - primary btn - lg" onclick="modalCall(event)">
+        <button id="` + mechanic.name + `" type="button" class="btn btn-primary" class="btn btn - primary btn - lg" onclick="modalCall(this)">
             <h3>
                 <b> Make An Appointment!
                 </b>
@@ -459,7 +461,7 @@
 
         let mechanicName = 'Jon Doe'
         let latitude = 0;
-        let longtitude = 0;
+        let longitude = 0;
 
         function confirmSelection() {
             document.getElementById('id01').style.display = "block"
@@ -485,7 +487,7 @@
             x.innerHTML = " Latitude: " + position.coords.latitude +
                 " <br>Longitude: " + position.coords.longitude;
             latitude = position.coords.latitude;
-            longtitude = position.coords.longtitude;
+            longitude = position.coords.longitude;
         } // Get the modal var modal = document.getElementById("myModal"); // Get the button that opens the modal // var btn = document.getElementById("myBtn");
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
@@ -504,7 +506,7 @@
         function modalCall(event) {
             let modal = document.getElementById("myModal");
             modal.style.display = "block"
-            mechanicName = event.target.id
+            mechanicName = event.id
         }
 
 
@@ -543,13 +545,14 @@
                 contacts: '',
                 mechanic: mechanicName,
                 latitude: latitude,
-                longtitude: longtitude,
+                longtitude: longitude,
                 token,
             };
             const url = '/appointment'
             const appointmentResult = await $.post(url, appointment);
-            console.log(appointmentResult)
-        });
+            console.log(appointment)
+         
+  });
     </script>
 </body>
 
